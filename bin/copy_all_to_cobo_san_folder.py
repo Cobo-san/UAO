@@ -141,6 +141,8 @@ def main():
         os.path.join(paths["living_repo"], "templates", "uao_master_deployment_presentation.md"),
         os.path.join(paths["living_repo"], "templates", "worldwide_multi_region_cross_os_architecture_master.md"),
         os.path.join(paths["living_repo"], "templates", "ollama", "Modelfile.llama3.3"),
+        os.path.join(paths["living_repo"], "bin", "save_memories_and_create_backups.py"),
+        os.path.join(paths["living_repo"], "bin", "echo_live_uao_system.py"),
         os.path.join(paths["living_repo"], "bin", "master_execution_checklist_auditor.py"),
         os.path.join(paths["living_repo"], "bin", "check_multimodal_status.py"),
         os.path.join(paths["living_repo"], "bin", "generate_agent_checklist.py"),
