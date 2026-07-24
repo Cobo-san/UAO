@@ -123,12 +123,14 @@ def main():
 
     # 2. Source Files to Copy and Bundle (Including Anaconda Master AI Platform Stack)
     files_to_copy = [
-        # Anaconda Master AI Platform Stack, Universal VM & Docker Blueprints
+        # Anaconda Master AI Platform Stack, Universal VM, Docker & Secrets Blueprints
         os.path.join(paths["living_repo"], "templates", "cobo_docker_containerization_plan.md"),
         os.path.join(paths["living_repo"], "templates", "docker", "docker-compose.yml"),
         os.path.join(paths["living_repo"], "templates", "universal_vm_integration_blueprint.md"),
         os.path.join(paths["living_repo"], "templates", "universal_vm_integration_template.py"),
         os.path.join(paths["living_repo"], "templates", "freebsd_oracle_cloud_desktop_blueprint.md"),
+        os.path.join(paths["living_repo"], "templates", "secrets_security_management_blueprint.md"),
+        os.path.join(paths["living_repo"], "bin", "scan_for_secrets.py"),
         os.path.join(paths["living_repo"], "bin", "sandbox_path_validator.py"),
         os.path.join(paths["living_repo"], "bin", "test_sandbox_posix_paths.py"),
         os.path.join(paths["brain_artifacts"], "sata_hdd_vm_launch_and_security_report.md"),
