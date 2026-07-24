@@ -123,7 +123,7 @@ def main():
 
     # 2. Source Files to Copy and Bundle (Including Anaconda Master AI Platform Stack)
     files_to_copy = [
-        # Anaconda Master AI Platform Stack, Universal VM, Docker & Hardware Blueprints
+        # Anaconda Master AI Platform Stack, Universal VM, Docker & Multi-Model Blueprints
         os.path.join(paths["living_repo"], "templates", "cobo_docker_containerization_plan.md"),
         os.path.join(paths["living_repo"], "templates", "docker", "docker-compose.yml"),
         os.path.join(paths["living_repo"], "templates", "universal_vm_integration_blueprint.md"),
@@ -131,7 +131,9 @@ def main():
         os.path.join(paths["living_repo"], "templates", "freebsd_oracle_cloud_desktop_blueprint.md"),
         os.path.join(paths["living_repo"], "templates", "secrets_security_management_blueprint.md"),
         os.path.join(paths["living_repo"], "templates", "ddr5_ram_kvm_readonly_nvme_blueprint.md"),
+        os.path.join(paths["living_repo"], "templates", "multi_model_orchestration_and_routing_blueprint.md"),
         os.path.join(paths["living_repo"], "templates", "ollama", "Modelfile.llama3.3"),
+        os.path.join(paths["living_repo"], "bin", "dynamic_multi_model_router.py"),
         os.path.join(paths["living_repo"], "bin", "share_nvme_models_with_ollama.py"),
         os.path.join(paths["living_repo"], "bin", "scan_for_secrets.py"),
         os.path.join(paths["living_repo"], "bin", "sandbox_path_validator.py"),
