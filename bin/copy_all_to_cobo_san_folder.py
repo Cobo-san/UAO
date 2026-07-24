@@ -136,6 +136,7 @@ def main():
         os.path.join(paths["living_repo"], "templates", "quad_model_tri_drive_consensus_blueprint.md"),
         os.path.join(paths["living_repo"], "templates", "ddh_nvme_preservation_parallel_matrix_blueprint.md"),
         os.path.join(paths["living_repo"], "templates", "ollama", "Modelfile.llama3.3"),
+        os.path.join(paths["living_repo"], "bin", "replicate_quad_models_across_drives.py"),
         os.path.join(paths["living_repo"], "bin", "three_day_rolling_audit_trail.py"),
         os.path.join(paths["living_repo"], "bin", "install_all_quad_agents_and_dependencies.py"),
         os.path.join(paths["living_repo"], "bin", "ddh_model_integrity_hasher.py"),
