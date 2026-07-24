@@ -15,8 +15,11 @@ services:
       - GCP_PROJECT_ID=anaconda-google-project-sounddharma
       - PYTHONUNBUFFERED=1
     volumes:
-      - ../..:/app/living_repository
+      - ../..:/app/living_repository:ro
       - cobo_synaptic_matrix:/app/living_repository/synaptic_matrix
+    tmpfs:
+      - /tmp:rw,exec,nosuid,size=16G
+      - /dev/shm:rw,exec,nosuid,size=16G
 
   # 2. Synaptic MCP Kernel Router (Ports 8080-8095)
   cobo-synaptic-mcp-router:
@@ -31,8 +34,11 @@ services:
     depends_on:
       - cobo-core-orchestrator
     volumes:
-      - ../..:/app/living_repository
+      - ../..:/app/living_repository:ro
       - cobo_synaptic_matrix:/app/living_repository/synaptic_matrix
+    tmpfs:
+      - /tmp:rw,exec,nosuid,size=16G
+      - /dev/shm:rw,exec,nosuid,size=16G
 
   # 3. Local LLM llama.cpp Inference Server (Port 8090)
   cobo-llama-inference:
@@ -44,8 +50,11 @@ services:
       - "8090:8090"
     volumes:
       - D:/AI_Dedicated_Storage_Secondary/models_gguf_mirror:/models:ro
+    tmpfs:
+      - /tmp:rw,exec,nosuid,size=16G
+      - /dev/shm:rw,exec,nosuid,size=16G
 
-  # 4. AlmaLinux-10 OS Cluster Node
+  # 4. AlmaLinux-10 OS Cluster Node (KVM DDR5 RAM Execution)
   cobo-almalinux-cluster:
     image: almalinux:10
     container_name: cobo-almalinux-cluster
@@ -53,8 +62,11 @@ services:
     command: tail -f /dev/null
     volumes:
       - ../..:/mnt/living_repository:ro
+    tmpfs:
+      - /tmp:rw,exec,nosuid,size=16G
+      - /dev/shm:rw,exec,nosuid,size=16G
 
-  # 5. Ubuntu 24.04 LTS OS Cluster Node
+  # 5. Ubuntu 24.04 LTS OS Cluster Node (KVM DDR5 RAM Execution)
   cobo-ubuntu-cluster:
     image: ubuntu:24.04
     container_name: cobo-ubuntu-cluster
@@ -62,6 +74,9 @@ services:
     command: tail -f /dev/null
     volumes:
       - ../..:/mnt/living_repository:ro
+    tmpfs:
+      - /tmp:rw,exec,nosuid,size=16G
+      - /dev/shm:rw,exec,nosuid,size=16G
 
   # 6. FreeBSD / Linux Desktop GUI Endpoint (RDP Port 3389)
   cobo-freebsd-desktop:
@@ -72,6 +87,9 @@ services:
     restart: always
     ports:
       - "3389:3389"
+    tmpfs:
+      - /tmp:rw,exec,nosuid,size=16G
+      - /dev/shm:rw,exec,nosuid,size=16G
 
   # 7. Spaceship Cockpit Flight Simulator HUD Dashboard (Nginx Port 80)
   cobo-cockpit-hud:
