@@ -11,8 +11,8 @@ import subprocess
 import platform
 
 ACCOUNT_EMAIL = "sounddharma@gmail.com"
-GITHUB_USERNAME = "sounddharma"
-REPO_NAME = "cobo-san-master-build"
+GITHUB_USERNAME = "Cobo-san"
+REPO_NAME = "UAO"
 
 def get_current_os():
     return platform.system()

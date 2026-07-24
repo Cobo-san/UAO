@@ -1,9 +1,10 @@
-# 🚀 Master Antigravity IDE & Anaconda AI Platform Stack
+# 🚀 UAO — Unified Architecture & Operations (Cobo-San Master Build)
 
+**GitHub Repository:** [https://github.com/Cobo-san/UAO](https://github.com/Cobo-san/UAO)  
 **Account Email:** `sounddharma@gmail.com`  
 **GCP Project ID:** `anaconda-google-project-sounddharma`  
 **Conda Environment:** `anaconda_google_project` (Python `3.12.10`)  
-**Supported Distro Clusters:** Windows 11 Host, AlmaLinux-10 WSL2, Ubuntu WSL2, FreeBSD Node  
+**Supported Distro Clusters:** Windows 11 Host, AlmaLinux-10 WSL2, Ubuntu WSL2, FreeBSD Cloud Node, Debian, Arch Edge, Rocky Linux  
 **Disaster Recovery Build:** `cobo-san_master_unified_all_in_one_build.json` (Read-Only Locked)
 
 ---
