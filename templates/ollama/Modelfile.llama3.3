@@ -1,10 +1,7 @@
-# Ollama Modelfile sharing local NVMe GGUF weights
 FROM /mnt/d/AI_Dedicated_Storage_Secondary/models_gguf_mirror/Llama-3.3-70B-Instruct-Q4_K_M.gguf
 
-# System Prompt Template for Cobo-San / UAO Subagents
-SYSTEM """You are an expert AI subagent in the UAO system running on dual NVMe storage with zero-cost local inference."""
+SYSTEM """You are the Master Orchestrator subagent for the UAO system."""
 
-# Parameters optimized for 24-core i9-14900K and NVMe throughput
 PARAMETER num_ctx 8192
 PARAMETER temperature 0.7
 PARAMETER top_p 0.9
