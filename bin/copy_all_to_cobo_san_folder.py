@@ -138,6 +138,7 @@ def main():
         os.path.join(paths["living_repo"], "templates", "multimodal_voice_vision_terminal_automation_blueprint.md"),
         os.path.join(paths["living_repo"], "templates", "complete_multimodal_audio_video_visual_workflows_blueprint.md"),
         os.path.join(paths["living_repo"], "templates", "ollama", "Modelfile.llama3.3"),
+        os.path.join(paths["living_repo"], "bin", "linear_install_and_replicate_engine.py"),
         os.path.join(paths["living_repo"], "bin", "complete_multimodal_audio_video_visual_workflows.py"),
         os.path.join(paths["living_repo"], "bin", "hierarchical_multimodal_director_and_managers.py"),
         os.path.join(paths["living_repo"], "bin", "universal_multimodal_voice_vision_pipeline.py"),
