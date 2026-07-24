@@ -15,9 +15,9 @@ DRIVES = ["C:", "D:", "E:"]
 
 MODEL_SOURCES = {
     "Llama-3.3-70B-Instruct-Q4_K_M.gguf": r"C:\AI_Dedicated_Storage_1TB\models_gguf\Llama-3.3-70B-Instruct-Q4_K_M.gguf",
-    "Qwen-2.5-Coder-32B-Instruct-Q5_K_M.gguf": r"D:\AI_Dedicated_Storage_Secondary\models_gguf_mirror\Qwen-2.5-Coder-32B-Instruct-Q5_K_M.gguf",
-    "DeepSeek-R1-Distill-Llama-70B-Q4_K_M.gguf": r"D:\AI_Dedicated_Storage_Secondary\models_gguf_mirror\DeepSeek-R1-Distill-Llama-70B-Q4_K_M.gguf",
-    "Codestral-22B-v0.1-Q5_K_M.gguf": r"E:\AI_Dedicated_Storage_Tertiary\models_gguf\Codestral-22B-v0.1-Q5_K_M.gguf"
+    "Qwen-2.5-Coder-32B-Instruct-Q5_K_M.gguf": r"C:\AI_Dedicated_Storage_1TB\models_gguf\Qwen-2.5-Coder-32B-Instruct-Q5_K_M.gguf",
+    "DeepSeek-R1-Distill-Llama-70B-Q4_K_M.gguf": r"C:\AI_Dedicated_Storage_1TB\models_gguf\DeepSeek-R1-Distill-Llama-70B-Q4_K_M.gguf",
+    "Codestral-22B-v0.1-Q5_K_M.gguf": r"C:\AI_Dedicated_Storage_1TB\models_gguf\Codestral-22B-v0.1-Q5_K_M.gguf"
 }
 
 def get_drive_target_path(drive_letter, filename):

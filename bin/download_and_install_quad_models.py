@@ -23,22 +23,22 @@ DOWNLOAD_TARGETS = [
         "model_name": "Qwen-2.5-Coder-32B-Instruct-Q5_K_M.gguf",
         "repo_id": "Qwen/Qwen2.5-Coder-32B-Instruct-GGUF",
         "file_name": "qwen2.5-coder-32b-instruct-q5_k_m.gguf",
-        "target_dir": r"D:\AI_Dedicated_Storage_Secondary\models_gguf_mirror",
-        "posix_dir": "/mnt/d/AI_Dedicated_Storage_Secondary/models_gguf_mirror"
+        "target_dir": r"C:\AI_Dedicated_Storage_1TB\models_gguf",
+        "posix_dir": "/mnt/c/AI_Dedicated_Storage_1TB/models_gguf"
     },
     {
         "model_name": "DeepSeek-R1-Distill-Llama-70B-Q4_K_M.gguf",
         "repo_id": "unsloth/DeepSeek-R1-Distill-Llama-70B-GGUF",
         "file_name": "DeepSeek-R1-Distill-Llama-70B-Q4_K_M.gguf",
-        "target_dir": r"D:\AI_Dedicated_Storage_Secondary\models_gguf_mirror",
-        "posix_dir": "/mnt/d/AI_Dedicated_Storage_Secondary/models_gguf_mirror"
+        "target_dir": r"C:\AI_Dedicated_Storage_1TB\models_gguf",
+        "posix_dir": "/mnt/c/AI_Dedicated_Storage_1TB/models_gguf"
     },
     {
         "model_name": "Codestral-22B-v0.1-Q5_K_M.gguf",
-        "repo_id": "mistralai/Codestral-22B-v0.1-GGUF",
+        "repo_id": "bartowski/Codestral-22B-v0.1-GGUF",
         "file_name": "Codestral-22B-v0.1-Q5_K_M.gguf",
-        "target_dir": r"E:\AI_Dedicated_Storage_Tertiary\models_gguf",
-        "posix_dir": "/mnt/e/AI_Dedicated_Storage_Tertiary/models_gguf"
+        "target_dir": r"C:\AI_Dedicated_Storage_1TB\models_gguf",
+        "posix_dir": "/mnt/c/AI_Dedicated_Storage_1TB/models_gguf"
     }
 ]
 
