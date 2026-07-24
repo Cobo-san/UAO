@@ -1,0 +1,194 @@
+{
+  "mcpServers": {
+    "kernel_c_drive_primary": {
+      "command": "C:\\Users\\Monica Fugazi\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\antigravity_terminal_server.py",
+        "--port",
+        "8080"
+      ],
+      "env": {
+        "MCP_PORT": "8080",
+        "KERNEL_TYPE": "PRIMARY",
+        "GCP_PROJECT": "anaconda-google-project-sounddharma",
+        "ACCOUNT_EMAIL": "sounddharma@gmail.com"
+      }
+    },
+    "kernel_d_drive_secondary": {
+      "command": "C:\\Users\\Monica Fugazi\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\antigravity_terminal_server.py",
+        "--port",
+        "8081"
+      ],
+      "env": {
+        "MCP_PORT": "8081",
+        "KERNEL_TYPE": "PRIMARY",
+        "GCP_PROJECT": "anaconda-google-project-sounddharma",
+        "ACCOUNT_EMAIL": "sounddharma@gmail.com"
+      }
+    },
+    "kernel_dual_bus_router": {
+      "command": "C:\\Users\\Monica Fugazi\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\antigravity_terminal_server.py",
+        "--port",
+        "8082"
+      ],
+      "env": {
+        "MCP_PORT": "8082",
+        "KERNEL_TYPE": "PRIMARY",
+        "GCP_PROJECT": "anaconda-google-project-sounddharma",
+        "ACCOUNT_EMAIL": "sounddharma@gmail.com"
+      }
+    },
+    "kernel_quantum_cirq": {
+      "command": "C:\\Users\\Monica Fugazi\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\antigravity_terminal_server.py",
+        "--port",
+        "8086"
+      ],
+      "env": {
+        "MCP_PORT": "8086",
+        "KERNEL_TYPE": "QUANTUM",
+        "GCP_PROJECT": "anaconda-google-project-sounddharma",
+        "ACCOUNT_EMAIL": "sounddharma@gmail.com"
+      }
+    },
+    "kernel_math_onemkl": {
+      "command": "C:\\Users\\Monica Fugazi\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\antigravity_terminal_server.py",
+        "--port",
+        "8087"
+      ],
+      "env": {
+        "MCP_PORT": "8087",
+        "KERNEL_TYPE": "MATH",
+        "GCP_PROJECT": "anaconda-google-project-sounddharma",
+        "ACCOUNT_EMAIL": "sounddharma@gmail.com"
+      }
+    },
+    "kernel_gpu_cuquantum": {
+      "command": "C:\\Users\\Monica Fugazi\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\antigravity_terminal_server.py",
+        "--port",
+        "8088"
+      ],
+      "env": {
+        "MCP_PORT": "8088",
+        "KERNEL_TYPE": "GPU",
+        "GCP_PROJECT": "anaconda-google-project-sounddharma",
+        "ACCOUNT_EMAIL": "sounddharma@gmail.com"
+      }
+    },
+    "kernel_cloud_gcp_free": {
+      "command": "C:\\Users\\Monica Fugazi\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\antigravity_terminal_server.py",
+        "--port",
+        "8089"
+      ],
+      "env": {
+        "MCP_PORT": "8089",
+        "KERNEL_TYPE": "CLOUD",
+        "GCP_PROJECT": "anaconda-google-project-sounddharma",
+        "ACCOUNT_EMAIL": "sounddharma@gmail.com"
+      }
+    },
+    "kernel_native_llama70b": {
+      "command": "C:\\Users\\Monica Fugazi\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\antigravity_terminal_server.py",
+        "--port",
+        "8090"
+      ],
+      "env": {
+        "MCP_PORT": "8090",
+        "KERNEL_TYPE": "INFERENCE",
+        "GCP_PROJECT": "anaconda-google-project-sounddharma",
+        "ACCOUNT_EMAIL": "sounddharma@gmail.com"
+      }
+    },
+    "kernel_rag_vector_search": {
+      "command": "C:\\Users\\Monica Fugazi\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\antigravity_terminal_server.py",
+        "--port",
+        "8091"
+      ],
+      "env": {
+        "MCP_PORT": "8091",
+        "KERNEL_TYPE": "SEARCH",
+        "GCP_PROJECT": "anaconda-google-project-sounddharma",
+        "ACCOUNT_EMAIL": "sounddharma@gmail.com"
+      }
+    },
+    "kernel_oracle_debian_cloud": {
+      "command": "C:\\Users\\Monica Fugazi\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\antigravity_terminal_server.py",
+        "--port",
+        "8092"
+      ],
+      "env": {
+        "MCP_PORT": "8092",
+        "KERNEL_TYPE": "CLOUD_OS",
+        "GCP_PROJECT": "anaconda-google-project-sounddharma",
+        "ACCOUNT_EMAIL": "sounddharma@gmail.com"
+      }
+    },
+    "kernel_edge_arch_node": {
+      "command": "C:\\Users\\Monica Fugazi\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\antigravity_terminal_server.py",
+        "--port",
+        "8093"
+      ],
+      "env": {
+        "MCP_PORT": "8093",
+        "KERNEL_TYPE": "CLOUD_OS",
+        "GCP_PROJECT": "anaconda-google-project-sounddharma",
+        "ACCOUNT_EMAIL": "sounddharma@gmail.com"
+      }
+    },
+    "kernel_oracle_rocky_cloud": {
+      "command": "C:\\Users\\Monica Fugazi\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\antigravity_terminal_server.py",
+        "--port",
+        "8094"
+      ],
+      "env": {
+        "MCP_PORT": "8094",
+        "KERNEL_TYPE": "CLOUD_OS",
+        "GCP_PROJECT": "anaconda-google-project-sounddharma",
+        "ACCOUNT_EMAIL": "sounddharma@gmail.com"
+      }
+    },
+    "kernel_oracle_freebsd_desktop": {
+      "command": "C:\\Users\\Monica Fugazi\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\antigravity_terminal_server.py",
+        "--port",
+        "8095"
+      ],
+      "env": {
+        "MCP_PORT": "8095",
+        "KERNEL_TYPE": "CLOUD_OS_DESKTOP",
+        "GCP_PROJECT": "anaconda-google-project-sounddharma",
+        "ACCOUNT_EMAIL": "sounddharma@gmail.com"
+      }
+    }
+  },
+  "metadata": {
+    "system": "Anaconda Google Project Unified Multi-OS Native & Cloud Orchestrator",
+    "account_email": "sounddharma@gmail.com",
+    "total_synaptic_kernels": 13,
+    "total_os_clusters": 7,
+    "total_mapped_routes": 63,
+    "timestamp_utc": "2026-07-24 14:30:49"
+  }
+}

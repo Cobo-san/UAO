@@ -1,0 +1,47 @@
+{
+  "total_antigravity_pages": 6,
+  "pages": [
+    {
+      "topic": "Antigravity Getting Started",
+      "section": "Core Architecture",
+      "title": "Google Antigravity Overview & Setup",
+      "url": "https://antigravity.google/docs/getting-started",
+      "content": "Google Antigravity (AGY) Next-Generation Agentic AI Coding System by Google DeepMind team. Supports multi-subagent orchestration, local workspace living repository, and zero-cost cloud synchronization."
+    },
+    {
+      "topic": "Antigravity CLI (agy)",
+      "section": "Command Line Interface",
+      "title": "Antigravity CLI (agy) Usage & Commands",
+      "url": "https://antigravity.google/docs/cli",
+      "content": "agy CLI tool for running autonomous agent goals, managing background tasks, configuring MCP servers, and dispatching subagent conversation threads."
+    },
+    {
+      "topic": "Antigravity IDE & Sidecars",
+      "section": "IDE Integration",
+      "title": "Antigravity IDE & Terminal Server Interface",
+      "url": "https://antigravity.google/docs/ide",
+      "content": "Antigravity IDE integration with live terminal server (port 9999), HTML flight simulator cockpit HUD, and 3-mirror token reduction engine."
+    },
+    {
+      "topic": "Antigravity 2.0 & SDK",
+      "section": "Python SDK & APIs",
+      "title": "Google Antigravity 2.0 Python SDK",
+      "url": "https://antigravity.google/docs/sdk",
+      "content": "Python SDK for programmatic subagent invocation (define_subagent, invoke_subagent, send_message) and artifact management."
+    },
+    {
+      "topic": "Antigravity Slash Commands",
+      "section": "User Workflows",
+      "title": "Antigravity Interactive Slash Commands",
+      "url": "https://antigravity.google/docs/slash-commands",
+      "content": "Interactive slash commands: /goal (long-running goal execution), /plan (step-by-step planning), /schedule (cron & timer notifications), /grill-me (interview mode), /learn (memory persistence)."
+    },
+    {
+      "topic": "Antigravity Customization",
+      "section": "Skills & Plugins",
+      "title": "Antigravity Skills, Rules & MCP Plugins System",
+      "url": "https://antigravity.google/docs/customization",
+      "content": "Extensible agent skills plugin ecosystem, SKILL.md instruction files, ripgrep code search, view_file slicing, and MCP sidecars."
+    }
+  ]
+}

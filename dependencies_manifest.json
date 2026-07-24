@@ -1,0 +1,51 @@
+{
+  "system_metadata": {
+    "account_email": "sounddharma@gmail.com",
+    "gcp_project_id": "anaconda-google-project-sounddharma",
+    "conda_env_name": "anaconda_google_project",
+    "python_version": "3.12.10",
+    "os_platform": "Windows-11-10.0.26200-SP0",
+    "timestamp_utc": "2026-07-24 14:22:54"
+  },
+  "python_pinned_dependencies": [
+    "cirq==1.7.0",
+    "openfermion==1.8.1",
+    "numpy==2.5.1",
+    "scipy==1.18.0",
+    "requests==2.34.2",
+    "urllib3==2.7.0",
+    "setuptools==83.0.0"
+  ],
+  "standard_library_dependencies": [
+    "sqlite3",
+    "struct",
+    "json",
+    "hashlib",
+    "shutil",
+    "os",
+    "sys",
+    "time",
+    "platform",
+    "subprocess",
+    "webbrowser",
+    "stat",
+    "math",
+    "py_compile"
+  ],
+  "hardware_and_storage_dependencies": {
+    "cpu_hardware": "Intel i9-14900K (24 Cores / 32 Threads)",
+    "primary_nvme": "C:\\AI_Dedicated_Storage_1TB (Sabrent Rocket 4TB @ 7,000 MB/s)",
+    "secondary_nvme": "D:\\AI_Dedicated_Storage_Secondary (Samsung 970 EVO 500GB @ 3,500 MB/s)",
+    "local_model_weights": "Llama-3.3-70B-Instruct-Q4_K_M.gguf (39.6 GB)"
+  },
+  "cloud_and_edge_dependencies": {
+    "gcp_regions": {
+      "Windows": "us-east1 (South Carolina)",
+      "AlmaLinux": "us-central1 (Iowa)",
+      "Ubuntu": "us-west1 (Oregon)"
+    },
+    "oracle_cloud": "VM.Standard.A1.Flex (4 ARM, 24GB RAM in eu-frankfurt-1) + VM.Standard.E2.1.Micro (eu-amsterdam-1)",
+    "cloudflare_r2": "Global Edge Network (300+ Edge POPs)",
+    "google_drive": "2 TB Workspace Storage Account sounddharma@gmail.com"
+  }
+}

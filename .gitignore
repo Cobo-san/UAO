@@ -1,0 +1,11 @@
+# Cobo-San Git Ignore File
+*.gguf
+*.iso
+*.vhd
+*.vhdx
+*.qcow2
+*.sqlite-wal
+*.sqlite-shm
+__pycache__/
+*.pyc
+.tmp.driveupload/

@@ -1,0 +1,13 @@
+{
+  "account": "sounddharma@gmail.com",
+  "build_name": "master_integrated_platform_all_modules",
+  "evaluation_days": 15,
+  "modules": [
+    "data_science",
+    "fastapi_backend",
+    "agent_rag",
+    "anaconda_desktop_llm",
+    "15day_staging"
+  ],
+  "status": "ACTIVE_15_DAY_TESTING"
+}

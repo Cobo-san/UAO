@@ -1,0 +1,31 @@
+{
+  "account": "sounddharma@gmail.com",
+  "auto_prompt_user_on_new_task": true,
+  "templates": {
+    "data_science_ai": {
+      "name": "Data Science & AI Template",
+      "path": "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\templates\\data_science_ai",
+      "description": "Python, Conda (conda-forge), NumPy, Pandas, Streamlit, PyTorch"
+    },
+    "web_app_microservice": {
+      "name": "Web App & Microservice Template",
+      "path": "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\templates\\web_app_microservice",
+      "description": "FastAPI / Flask microservice web application template"
+    },
+    "custom_skill": {
+      "name": "Custom AGY Skill Template",
+      "path": "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\templates\\custom_skill",
+      "description": "Reusable SKILL.md template for Antigravity skill creation"
+    },
+    "staging_15day_project": {
+      "name": "15-Day Staging Evaluation Template",
+      "path": "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\templates\\staging_15day_project",
+      "description": "15-day staging evaluation project template for Golden Image merge"
+    },
+    "master_integrated_template": {
+      "name": "\ud83c\udf1f Master Integrated Super-Template (RECOMMENDED)",
+      "path": "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\templates\\master_integrated_template",
+      "description": "Unified template combining Data Science, FastAPI Web Backend, Custom Skill, Agent RAG, and 15-Day Staging"
+    }
+  }
+}

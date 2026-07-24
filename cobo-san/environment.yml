@@ -1,0 +1,16 @@
+name: anaconda_google_project
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12.10
+  - sqlite
+  - pip
+  - pip:
+      - cirq==1.7.0
+      - openfermion==1.8.1
+      - numpy==2.5.1
+      - scipy==1.18.0
+      - requests==2.34.2
+      - urllib3==2.7.0
+      - setuptools==83.0.0

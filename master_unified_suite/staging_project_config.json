@@ -1,0 +1,12 @@
+{
+  "account": "sounddharma@gmail.com",
+  "build_type": "UNIFIED_ALL_IN_ONE_SUITE",
+  "evaluation_days": 15,
+  "components": [
+    "full_stack_app",
+    "llama_70b_server",
+    "staging_pipeline",
+    "custom_skill"
+  ],
+  "status": "ACTIVE_15_DAY_TESTING"
+}
