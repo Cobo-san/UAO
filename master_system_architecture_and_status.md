@@ -12,8 +12,8 @@
 
 ```mermaid
 graph TD
-    subgraph Cockpit HUD & Live Terminal Layer
-        HUD["Spaceship Cockpit Flight Simulator HUD\n(spaceship_cockpit_terminal_dashboard.html)"] <--> API["Live Terminal API Server\n(antigravity_terminal_server.py | Port 9999)"]
+    subgraph Live Terminal Layer
+        API["Live Terminal API Server\n(antigravity_terminal_server.py | Port 9999)"]
     end
 
     subgraph Three OS Execution Distros
@@ -44,7 +44,7 @@ graph TD
         R2["Cloudflare R2 Global Edge (10GB)"]
     end
 
-    HUD <==> WIN <==> MCP <==> ALMA <==> MCP <==> UBUNTU
+    API <==> WIN <==> MCP <==> ALMA <==> MCP <==> UBUNTU
     WIN <--> GQUANTUM & INTEL_MATH
     WIN --> REG_EAST
     ALMA --> REG_CENTRAL
@@ -158,12 +158,10 @@ graph TD
 
 ---
 
-## 🎛️ 8. Backend Antigravity Terminal Server & Cockpit Dashboards
+## 🎛️ 8. Backend Antigravity Terminal Server & Control Center Dashboard
 
 * **Backend Service Script**: [`antigravity_terminal_server.py`](file:///C:/Users/Monica%20Fugazi/.antigravity-ide/living_repository/bin/antigravity_terminal_server.py) (Port `9999`)
 * **Master System Launcher**: [`launch_anaconda_master_system.py`](file:///C:/Users/Monica%20Fugazi/.antigravity-ide/living_repository/bin/launch_anaconda_master_system.py)
-* **Desktop One-Click GUI Launcher**: `C:\Users\Monica Fugazi\Desktop\Launch Spaceship Flight Simulator.bat`
-* **Visual Cockpit HUD**: [`spaceship_cockpit_terminal_dashboard.html`](file:///C:/Users/Monica%20Fugazi/.antigravity-ide/living_repository/spaceship_cockpit_terminal_dashboard.html)
 * **Control Center Dashboard**: [`anaconda_master_system_dashboard.html`](file:///C:/Users/Monica%20Fugazi/.antigravity-ide/living_repository/anaconda_master_system_dashboard.html)
 
 ---

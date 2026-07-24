@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Spaceship Flight Simulator & Master System Cockpit Launcher
-Launches the Live Terminal Server (localhost:9999) and opens the Spaceship Cockpit HUD Dashboard.
+UAO Master System Launcher
+Launches the Live Terminal Server (localhost:9999) and opens the Control Center Dashboard.
 """
 
 import os
@@ -30,24 +30,24 @@ def launch_terminal_server():
         print("[+] Live Terminal Server Started on http://localhost:9999")
 
 def main():
-    print("=== Launching Antigravity Spaceship Cockpit & Live Terminal Suite ===")
-    
+    print("=== Launching UAO Master System & Live Terminal Suite ===")
+
     # 1. Start Terminal Server Background API
     launch_terminal_server()
 
-    # 2. Open Cockpit Flight Simulator HUD Dashboard in Browser
+    # 2. Open Control Center Dashboard in Browser
     if get_current_os() == "Windows":
-        dashboard_path = r"C:\Users\Monica Fugazi\.antigravity-ide\living_repository\spaceship_cockpit_terminal_dashboard.html"
+        dashboard_path = r"C:\Users\Monica Fugazi\.antigravity-ide\living_repository\anaconda_master_system_dashboard.html"
     else:
-        dashboard_path = "/mnt/c/Users/Monica Fugazi/.antigravity-ide/living_repository/spaceship_cockpit_terminal_dashboard.html"
+        dashboard_path = "/mnt/c/Users/Monica Fugazi/.antigravity-ide/living_repository/anaconda_master_system_dashboard.html"
 
     if os.path.exists(dashboard_path):
-        print(f"[+] Opening Spaceship Cockpit Flight Simulator Dashboard: {dashboard_path}")
-        webbrowser.open(f"file:///{dashboard_path.replace('\\', '/')}")
+        print(f"[+] Opening Control Center Dashboard: {dashboard_path}")
+        webbrowser.open(f"file:///{dashboard_path.replace(chr(92), '/')}")
     else:
-        print(f"[!] Cockpit Dashboard file not found: {dashboard_path}")
+        print(f"[!] Dashboard file not found: {dashboard_path}")
 
-    print("[OK] SPACESHIP FLIGHT SIMULATOR COCKPIT & LIVE TERMINAL LAUNCHED SUCCESSFULLY!")
+    print("[OK] UAO MASTER SYSTEM & LIVE TERMINAL LAUNCHED SUCCESSFULLY!")
 
 if __name__ == "__main__":
     main()
