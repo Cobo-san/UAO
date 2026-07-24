@@ -94,8 +94,17 @@ graph TD
     LEADER --> MIR3
 
     M_VOICE --> DRIVE_C
+    M_VOICE --> DRIVE_D
+    M_VOICE --> DRIVE_E
+    M_VISION --> DRIVE_C
     M_VISION --> DRIVE_D
+    M_VISION --> DRIVE_E
+    M_CODE --> DRIVE_C
+    M_CODE --> DRIVE_D
     M_CODE --> DRIVE_E
+    M_MEDIA --> DRIVE_C
+    M_MEDIA --> DRIVE_D
+    M_MEDIA --> DRIVE_E
 
     M_VOICE --> STT
     M_VOICE --> TTS
