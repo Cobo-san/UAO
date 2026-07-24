@@ -104,8 +104,9 @@ def register_workflow_routes():
         for wf in MULTIMODAL_WORKFLOW_SERVERS:
             cursor.execute("""
             INSERT OR REPLACE INTO mcp_synaptic_routes
+            (route_id, source_distro, route_type, target_destination, mcp_port, latency_ms, status)
             VALUES (?, ?, ?, ?, ?, ?, ?);
-            """, (wf["server_id"], "MultiModalHost", wf["model"], wf["port"], wf["modality"], wf["workflow"], 1))
+            """, (wf["server_id"], "MultiModalHost", wf["modality"], wf["model"], wf["port"], 45.0, "ACTIVE_READY"))
             print(f"  [+] Registered Workflow ({wf['modality']}): {wf['name']} (Port {wf['port']})")
 
         conn.commit()
