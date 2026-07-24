@@ -181,6 +181,21 @@
         "GCP_PROJECT": "anaconda-google-project-sounddharma",
         "ACCOUNT_EMAIL": "sounddharma@gmail.com"
       }
+    },
+    "kernel_ollama_local": {
+      "command": "C:\\Users\\Monica Fugazi\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\antigravity_terminal_server.py",
+        "--port",
+        "11434"
+      ],
+      "env": {
+        "MCP_PORT": "11434",
+        "KERNEL_TYPE": "INFERENCE_OLLAMA",
+        "OLLAMA_HOST": "http://localhost:11434",
+        "GCP_PROJECT": "anaconda-google-project-sounddharma",
+        "ACCOUNT_EMAIL": "sounddharma@gmail.com"
+      }
     }
   },
   "metadata": {
