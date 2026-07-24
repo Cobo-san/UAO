@@ -91,15 +91,5 @@ services:
       - /tmp:rw,exec,nosuid,size=16G
       - /dev/shm:rw,exec,nosuid,size=16G
 
-  # 7. Spaceship Cockpit Flight Simulator HUD Dashboard (Nginx Port 80)
-  cobo-cockpit-hud:
-    image: nginx:alpine
-    container_name: cobo-cockpit-hud
-    restart: always
-    ports:
-      - "80:80"
-    volumes:
-      - ../../spaceship_cockpit_terminal_dashboard.html:/usr/share/nginx/html/index.html:ro
-
 volumes:
   cobo_synaptic_matrix:
