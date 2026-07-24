@@ -3,7 +3,7 @@
   "build_id": "cobo-san_master_unified_all_in_one_build",
   "account_email": "sounddharma@gmail.com",
   "gcp_project_id": "anaconda-google-project-sounddharma",
-  "timestamp_utc": "2026-07-24 15:30:22",
+  "timestamp_utc": "2026-07-24 15:34:47",
   "status": "100% UNIFIED, EMBEDDED, VERIFIED & READ-ONLY LOCKED",
   "read_only_protection": "ENFORCED_IMMUTABLE",
   "anaconda_ai_platform_stack": {
@@ -27,7 +27,7 @@
     "Ubuntu": "us-west1 (WSL2 Connected)"
   },
   "clusters_count": 5,
-  "total_embedded_files": 39,
+  "total_embedded_files": 41,
   "embedded_file_manifest": [
     "cobo_docker_containerization_plan.md",
     "docker-compose.yml",
@@ -35,6 +35,8 @@
     "universal_vm_integration_template.py",
     "freebsd_oracle_cloud_desktop_blueprint.md",
     "secrets_security_management_blueprint.md",
+    "Modelfile.llama3.3",
+    "share_nvme_models_with_ollama.py",
     "scan_for_secrets.py",
     "sandbox_path_validator.py",
     "test_sandbox_posix_paths.py",
@@ -111,6 +113,20 @@
       "sha256": "850f4fa35e0b578abfa410fa15d590452e6600cc03972dae4fd4c20d1f50db36",
       "content_type": "text",
       "content": "# \ud83d\udd10 Secrets & Security Management Blueprint: UAO Repository\n\n**Repository:** [https://github.com/Cobo-san/UAO](https://github.com/Cobo-san/UAO)  \n**Security Policy:** Zero Hardcoded Credentials & 100% Environment Variable Isolation\n\n---\n\n## \ud83d\udee1\ufe0f 5-Step Secret Protection Protocol\n\n### 1. Environment Variable Isolation (`.env`)\nNever hardcode API keys, passwords, or tokens in source code. Store local secrets in a `.env` file:\n\n```env\n# Local Environment Secrets (Ignored by Git)\nACCOUNT_EMAIL=sounddharma@gmail.com\nGCP_PROJECT_ID=anaconda-google-project-sounddharma\nAZURE_CLIENT_ID=your_azure_client_id_here\nAZURE_TENANT_ID=your_azure_tenant_id_here\nAZURE_SUBSCRIPTION_ID=your_azure_subscription_id_here\nCODECOV_TOKEN=your_codecov_token_here\n```\n\nIn Python code, access variables safely:\n```python\nimport os\nfrom dotenv import load_dotenv\n\nload_dotenv()\napi_key = os.getenv(\"API_KEY_SECRET\", \"fallback_default\")\n```\n\n---\n\n### 2. Git Ignore Security Enforcement (`.gitignore`)\nEnsure all credential files, token keys, and environment files are blocked from Git commits:\n\n```text\n# Sensitive Credential Files\n.env\n.env.local\n*.pem\n*.key\n*.p12\n*_credentials.json\nservice_account.json\n```\n\n---\n\n### 3. GitHub Repository Secrets for Actions CI/CD\nStore workflow secrets safely in GitHub Repository Settings:\n* **Navigate to**: `https://github.com/Cobo-san/UAO -> Settings -> Secrets and variables -> Actions`\n* **Add Secrets**:\n  - `AZURE_CLIENT_ID`\n  - `AZURE_TENANT_ID`\n  - `AZURE_SUBSCRIPTION_ID`\n  - `CODECOV_TOKEN`\n\nIn `.github/workflows/validate-posix-sandbox-paths.yml`:\n```yaml\nenv:\n  AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}\n  AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}\n```\n\n---\n\n### 4. Automated Pre-Commit Secret Scanner\nBefore pushing commits, run the automated secret scanner script:\n```bash\npython bin/scan_for_secrets.py\n```\n**Status Target**: `100% CLEAN - NO HARDCODED SECRETS OR PRIVATE KEYS DETECTED`.\n\n---\n\n### 5. Git History Scrubbing (Emergency Recovery)\nIf a secret is ever accidentally committed to Git history, revoke the key immediately and purge it using `git-filter-repo`:\n```bash\npip install git-filter-repo\ngit filter-repo --invert-paths --path .env\ngit push origin --force --all\n```\n"
+    },
+    "Modelfile.llama3.3": {
+      "filename": "Modelfile.llama3.3",
+      "file_size_bytes": 466,
+      "sha256": "b58ddedf5f747f5f262c27bb6fa6f03be109d2f762e8c454c8b96441224b1f98",
+      "content_type": "text",
+      "content": "# Ollama Modelfile sharing local NVMe GGUF weights\r\nFROM D:/AI_Dedicated_Storage_Secondary/models_gguf_mirror/Llama-3.3-70B-Instruct-Q4_K_M.gguf\r\n\r\n# System Prompt Template for Cobo-San / UAO Subagents\r\nSYSTEM \"\" You are an expert AI subagent in the UAO system running on dual NVMe storage with zero-cost local inference. \"\"\r\n\r\n# Parameters optimized for 24-core i9-14900K and NVMe throughput\r\nPARAMETER num_ctx 8192\r\nPARAMETER temperature 0.7\r\nPARAMETER top_p 0.9\r\n"
+    },
+    "share_nvme_models_with_ollama.py": {
+      "filename": "share_nvme_models_with_ollama.py",
+      "file_size_bytes": 2897,
+      "sha256": "36e0760d08120c80515d265a7f4f4f6586cff01b954dd5d49ad396e916eb9ad7",
+      "content_type": "text",
+      "content": "#!/usr/bin/env python3\n\"\"\"\nOllama & NVMe Model Sharing Bridge Engine\nConfigures Ollama to share and utilize the pre-built GGUF model weights, subagents,\nand vector mirrors stored on C: and D: NVMe drives without re-downloading.\n\"\"\"\n\nimport os\nimport sys\nimport json\nimport sqlite3\nimport platform\n\nACCOUNT_EMAIL = \"sounddharma@gmail.com\"\nGCP_PROJECT_ID = \"anaconda-google-project-sounddharma\"\n\n# Model paths on NVMe drives\nPRIMARY_NVME_MODEL = r\"C:\\AI_Dedicated_Storage_1TB\\models_gguf\\Llama-3.3-70B-Instruct-Q4_K_M.gguf\"\nSECONDARY_NVME_MODEL = r\"D:\\AI_Dedicated_Storage_Secondary\\models_gguf_mirror\\Llama-3.3-70B-Instruct-Q4_K_M.gguf\"\n\nPOSIX_SECONDARY_MODEL = \"/mnt/d/AI_Dedicated_Storage_Secondary/models_gguf_mirror/Llama-3.3-70B-Instruct-Q4_K_M.gguf\"\n\ndef get_current_os():\n    return platform.system()\n\ndef create_ollama_modelfile(target_dir):\n    os.makedirs(target_dir, exist_ok=True)\n    modelfile_path = os.path.join(target_dir, \"Modelfile.llama3.3\")\n\n    model_src = POSIX_SECONDARY_MODEL if get_current_os() != \"Windows\" else SECONDARY_NVME_MODEL.replace(\"\\\\\", \"/\")\n\n    content = f\"\"\"# Ollama Modelfile sharing local NVMe GGUF weights\nFROM {model_src}\n\n# System Prompt Template for Cobo-San / UAO Subagents\nSYSTEM \"\" You are an expert AI subagent in the UAO system running on dual NVMe storage with zero-cost local inference. \"\"\n\n# Parameters optimized for 24-core i9-14900K and NVMe throughput\nPARAMETER num_ctx 8192\nPARAMETER temperature 0.7\nPARAMETER top_p 0.9\n\"\"\"\n\n    with open(modelfile_path, \"w\", encoding=\"utf-8\") as f:\n        f.write(content)\n\n    print(f\"[+] Created Ollama Modelfile sharing NVMe GGUF weights: {modelfile_path}\")\n    return modelfile_path\n\ndef generate_environment_config():\n    print(\"\\n=== OLLAMA & NVME MODEL SHARING ENVIRONMENT CONFIG ===\")\n    print(\"Add the following environment variable to Windows / WSL2 to point Ollama directly to D: Drive:\")\n    print(\"--------------------------------------------------------------------------\")\n    print(r\"  Windows PowerShell: $env:OLLAMA_MODELS = 'D:\\AI_Dedicated_Storage_Secondary\\models_gguf_mirror'\")\n    print(r\"  System Environment: OLLAMA_MODELS=D:\\AI_Dedicated_Storage_Secondary\\models_gguf_mirror\")\n    print(r\"  Linux / WSL2: export OLLAMA_MODELS=/mnt/d/AI_Dedicated_Storage_Secondary/models_gguf_mirror\")\n    print(\"--------------------------------------------------------------------------\\n\")\n\ndef main():\n    print(\"=== OLLAMA & NVME MODEL SHARING BRIDGE ENGINE ===\")\n    target_dir = r\"C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\templates\\ollama\"\n    if get_current_os() != \"Windows\":\n        target_dir = \"/mnt/c/Users/Monica Fugazi/.antigravity-ide/living_repository/templates/ollama\"\n\n    create_ollama_modelfile(target_dir)\n    generate_environment_config()\n    print(\"[OK] NVME MODEL SHARING CONFIGURATION CREATED WITH 100% SUCCESS!\")\n\nif __name__ == \"__main__\":\n    main()\n"
     },
     "scan_for_secrets.py": {
       "filename": "scan_for_secrets.py",
