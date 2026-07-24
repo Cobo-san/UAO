@@ -64,6 +64,15 @@ HIERARCHICAL_AGENTS = [
         "engine_model": "FLUX.1-schnell + Meta MusicGen",
         "mcp_server": "kernel_media_creation_mcp",
         "description": "Domain Manager generating sleek dark-mode UI graphics, vector logos, and system alert sound FX."
+    },
+    {
+        "agent_id": "agent_cybersecurity_director",
+        "name": "Cybersecurity & Zero-Trust Director",
+        "type": "DIRECTOR_SECURITY",
+        "assigned_port": 8092,
+        "engine_model": "DeepSeek-R1-70B Security Engine",
+        "mcp_server": "kernel_cybersecurity_governance_mcp",
+        "description": "Executive Cybersecurity Director enforcing Zero-Trust architecture, secret scanning, read-only NVMe locks, POSIX sandbox path validation, and zero-cost policy compliance."
     }
 ]
 

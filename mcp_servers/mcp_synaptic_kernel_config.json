@@ -246,6 +246,19 @@
         "AGENT_PORT": "8097",
         "ENGINE_MODEL": "FLUX.1-schnell + Meta MusicGen"
       }
+    },
+    "kernel_cybersecurity_governance_mcp": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\hierarchical_multimodal_director_and_managers.py",
+        "--agent",
+        "agent_cybersecurity_director"
+      ],
+      "env": {
+        "AGENT_TYPE": "DIRECTOR_SECURITY",
+        "AGENT_PORT": "8092",
+        "ENGINE_MODEL": "DeepSeek-R1-70B Security Engine"
+      }
     }
   },
   "metadata": {
