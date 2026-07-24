@@ -1,0 +1,44 @@
+name: Validate POSIX Sandbox Paths & Windows Compatibility
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  validate-posix-sandbox:
+    name: POSIX Path Validation (PR #138 Fix)
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest, windows-latest ]
+        python-version: [ "3.12" ]
+
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/uses-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        shell: bash
+
+      - name: Validate POSIX Sandbox Paths (Windows & Linux)
+        run: |
+          python bin/sandbox_path_validator.py
+          python bin/test_sandbox_posix_paths.py
+        shell: bash
+
+      - name: Execute Master Build Diagnostic & Unit Tests
+        run: |
+          python bin/verify_system_status.py
+        shell: bash

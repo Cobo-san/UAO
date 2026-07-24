@@ -129,6 +129,8 @@ def main():
         os.path.join(paths["living_repo"], "templates", "universal_vm_integration_blueprint.md"),
         os.path.join(paths["living_repo"], "templates", "universal_vm_integration_template.py"),
         os.path.join(paths["living_repo"], "templates", "freebsd_oracle_cloud_desktop_blueprint.md"),
+        os.path.join(paths["living_repo"], "bin", "sandbox_path_validator.py"),
+        os.path.join(paths["living_repo"], "bin", "test_sandbox_posix_paths.py"),
         os.path.join(paths["brain_artifacts"], "sata_hdd_vm_launch_and_security_report.md"),
         os.path.join(paths["brain_artifacts"], "anaconda_master_ai_platform_stack.md"),
         os.path.join(paths["brain_artifacts"], "sata_hdd_recovery_plan_and_execution_report.md"),
