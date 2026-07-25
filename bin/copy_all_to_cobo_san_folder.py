@@ -185,6 +185,7 @@ def main():
         r"C:\Locutus_UAO_Master_Environment\locutus_neural_weights.sqlite",
         r"C:\Locutus_UAO_Master_Environment\uao_fastapi_gateway.py",
         r"C:\Locutus_UAO_Master_Environment\pin_locutus_to_ecores.py",
+        r"C:\Locutus_UAO_Master_Environment\evaluate_and_verify_global_apis.py",
         # Master System Images & Vectors
         os.path.join(paths["gdrive_golden"], "complete_master_system_and_dependencies_image.json"),
         os.path.join(paths["gdrive_golden"], "master_working_system_image.json"),
