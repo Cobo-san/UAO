@@ -1,0 +1,17 @@
+{
+  "build_id": "build_20260724_103049_sounddharma_master",
+  "account_email": "sounddharma@gmail.com",
+  "timestamp_utc": "2026-07-24 14:30:49",
+  "status": "PRODUCTION_GOLDEN_BUILD_PASSED",
+  "components": {
+    "model_c_token_reduction": "-66.1%",
+    "0_token_cache_latency_ms": "< 0.2ms",
+    "nvme_bandwidth_mbps": "14,000+ MB/s",
+    "monthly_financial_cost": "$0.00 FREE",
+    "gcp_regions": {
+      "Windows": "us-east1",
+      "AlmaLinux-10": "us-central1",
+      "Ubuntu": "us-west1"
+    }
+  }
+}

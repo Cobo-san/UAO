@@ -1,0 +1,22 @@
+# Cobo-San Core Orchestrator & MCP Server Base Dockerfile
+FROM python:3.12-slim-bookworm
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    sqlite3 \
+    procps \
+    curl \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python requirements
+COPY requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose ports
+EXPOSE 9999 8080-8095
+
+# Command default
+CMD ["python", "/app/living_repository/bin/antigravity_terminal_server.py"]

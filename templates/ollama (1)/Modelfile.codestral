@@ -1,0 +1,7 @@
+FROM /mnt/e/AI_Dedicated_Storage_Tertiary/models_gguf/Codestral-22B-v0.1-Q5_K_M.gguf
+
+SYSTEM """You are the Fast Subagent Background Worker & Unit Test Engine."""
+
+PARAMETER num_ctx 8192
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9

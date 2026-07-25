@@ -1,0 +1,11 @@
+# UAO Repository Environment Variables Template
+# Copy this file to '.env' and fill in local secret values. DO NOT commit '.env' to Git!
+
+ACCOUNT_EMAIL=sounddharma@gmail.com
+GCP_PROJECT_ID=anaconda-google-project-sounddharma
+
+# GitHub Actions Secrets (Configure under GitHub Repo Settings > Secrets)
+AZURE_CLIENT_ID=
+AZURE_TENANT_ID=
+AZURE_SUBSCRIPTION_ID=
+CODECOV_TOKEN=

@@ -1,0 +1,21 @@
+{
+  "account": "sounddharma@gmail.com",
+  "destination_directory": "C:\\Users\\Monica Fugazi\\GoogleDrive_sounddharma\\Parallel_Synaptic_Database_Matrix",
+  "database_name": "Parallel Synaptic Database Matrix v2.0",
+  "components": {
+    "skills_registry": "skills_and_mcps_registry.json",
+    "knowledge_graph": "knowledge_graph_topology.json",
+    "environment_matrix": "environment_profile_matrix.json",
+    "synaptic_matrix_jsonl": "parallel_synaptic_matrix.jsonl"
+  },
+  "totals": {
+    "skills_indexed": 47,
+    "plugins_indexed": 6,
+    "synaptic_rows": 47,
+    "vector_dimensions": 16,
+    "node_count": 28,
+    "edge_count": 39
+  },
+  "validator_status": "SUCCESS_VERIFIED",
+  "timestamp_utc": "2026-07-23T15:01:49Z"
+}

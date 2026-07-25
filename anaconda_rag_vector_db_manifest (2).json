@@ -1,0 +1,77 @@
+{
+  "total_vector_chunks": 303,
+  "vector_dimension": 16,
+  "timestamp_utc": "2026-07-23 22:39:35",
+  "sample_chunks": [
+    {
+      "table_source": "anaconda_docs_knowledge_base",
+      "chunk_title": "Anaconda Agent Studio Main",
+      "subdir": "agent-studio",
+      "document_chunk": "Title: Anaconda Agent Studio Main | Section: Section 1: Anaconda Desktop & Agent Studio (and all subdirs) | Subdir: agent-studio | URL: https://anaconda.com/docs/anaconda-desktop/agent-studio/main.md",
+      "framework": "Anaconda Agent Studio & Docs"
+    },
+    {
+      "table_source": "anaconda_docs_knowledge_base",
+      "chunk_title": "Agents Configuration",
+      "subdir": "agent-studio/agents",
+      "document_chunk": "Title: Agents Configuration | Section: Section 1: Anaconda Desktop & Agent Studio (and all subdirs) | Subdir: agent-studio/agents | URL: https://anaconda.com/docs/anaconda-desktop/agent-studio/agents.md",
+      "framework": "Anaconda Agent Studio & Docs"
+    },
+    {
+      "table_source": "anaconda_docs_knowledge_base",
+      "chunk_title": "Configuring AI Providers",
+      "subdir": "agent-studio/ai-providers",
+      "document_chunk": "Title: Configuring AI Providers | Section: Section 1: Anaconda Desktop & Agent Studio (and all subdirs) | Subdir: agent-studio/ai-providers | URL: https://anaconda.com/docs/anaconda-desktop/agent-studio/ai-providers.md",
+      "framework": "Anaconda Agent Studio & Docs"
+    },
+    {
+      "table_source": "anaconda_docs_knowledge_base",
+      "chunk_title": "Anaconda Assistant",
+      "subdir": "agent-studio/assistant",
+      "document_chunk": "Title: Anaconda Assistant | Section: Section 1: Anaconda Desktop & Agent Studio (and all subdirs) | Subdir: agent-studio/assistant | URL: https://anaconda.com/docs/anaconda-desktop/agent-studio/anaconda-assistant.md",
+      "framework": "Anaconda Agent Studio & Docs"
+    },
+    {
+      "table_source": "anaconda_docs_knowledge_base",
+      "chunk_title": "MCP Servers Integration",
+      "subdir": "agent-studio/mcp-servers",
+      "document_chunk": "Title: MCP Servers Integration | Section: Section 1: Anaconda Desktop & Agent Studio (and all subdirs) | Subdir: agent-studio/mcp-servers | URL: https://anaconda.com/docs/anaconda-desktop/agent-studio/mcp-servers.md",
+      "framework": "Anaconda Agent Studio & Docs"
+    },
+    {
+      "table_source": "anaconda_docs_knowledge_base",
+      "chunk_title": "Skills Catalog",
+      "subdir": "agent-studio/skills",
+      "document_chunk": "Title: Skills Catalog | Section: Section 1: Anaconda Desktop & Agent Studio (and all subdirs) | Subdir: agent-studio/skills | URL: https://anaconda.com/docs/anaconda-desktop/agent-studio/skills.md",
+      "framework": "Anaconda Agent Studio & Docs"
+    },
+    {
+      "table_source": "anaconda_docs_knowledge_base",
+      "chunk_title": "Tool Servers",
+      "subdir": "agent-studio/tool-servers",
+      "document_chunk": "Title: Tool Servers | Section: Section 1: Anaconda Desktop & Agent Studio (and all subdirs) | Subdir: agent-studio/tool-servers | URL: https://anaconda.com/docs/anaconda-desktop/agent-studio/tool-servers.md",
+      "framework": "Anaconda Agent Studio & Docs"
+    },
+    {
+      "table_source": "anaconda_docs_knowledge_base",
+      "chunk_title": "Crafting Effective System Prompts",
+      "subdir": "tutorials/system-prompt",
+      "document_chunk": "Title: Crafting Effective System Prompts | Section: Section 1: Anaconda Desktop & Agent Studio (and all subdirs) | Subdir: tutorials/system-prompt | URL: https://anaconda.com/docs/anaconda-desktop/tutorials/system-prompt.md",
+      "framework": "Anaconda Agent Studio & Docs"
+    },
+    {
+      "table_source": "anaconda_docs_knowledge_base",
+      "chunk_title": "Installing Anaconda Desktop",
+      "subdir": "install",
+      "document_chunk": "Title: Installing Anaconda Desktop | Section: Section 1: Anaconda Desktop & Agent Studio (and all subdirs) | Subdir: install | URL: https://anaconda.com/docs/anaconda-desktop/install-desktop.md",
+      "framework": "Anaconda Agent Studio & Docs"
+    },
+    {
+      "table_source": "anaconda_docs_knowledge_base",
+      "chunk_title": "Uninstalling Desktop",
+      "subdir": "uninstall",
+      "document_chunk": "Title: Uninstalling Desktop | Section: Section 1: Anaconda Desktop & Agent Studio (and all subdirs) | Subdir: uninstall | URL: https://anaconda.com/docs/anaconda-desktop/uninstall-desktop.md",
+      "framework": "Anaconda Agent Studio & Docs"
+    }
+  ]
+}

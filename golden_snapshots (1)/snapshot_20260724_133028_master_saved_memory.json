@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-07-24T17:30:28.537800",
+  "build_version": "UAO-3.0-GOLDEN-MASTER",
+  "gcp_project_id": "anaconda-google-project-sounddharma",
+  "account_email": "sounddharma@gmail.com",
+  "models_provisioned": [
+    "Llama-3.3-70B-Instruct-Q4_K_M.gguf",
+    "Qwen-2.5-Coder-32B-Instruct-Q5_K_M.gguf",
+    "DeepSeek-R1-Distill-Llama-70B-Q4_K_M.gguf",
+    "Codestral-22B-v0.1-Q5_K_M.gguf"
+  ],
+  "multi_drive_matrix": [
+    "C:",
+    "D:",
+    "E:"
+  ],
+  "registered_agents": 12,
+  "multimodal_ports": [
+    8094,
+    8095,
+    8096,
+    8097,
+    8098,
+    8099
+  ],
+  "anaconda_frameworks": 7,
+  "anaconda_llm_catalog_entries": 18,
+  "status": "100% OPERATIONAL & READ-ONLY LOCKED"
+}

@@ -1,0 +1,7 @@
+{
+  "tool_name": "system_health_check_tool",
+  "description": "Dynamic tool to perform rapid OS & Python health check",
+  "script_path": "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\custom_tools\\system_health_check_tool.py",
+  "created_timestamp": "2026-07-23 19:39:01",
+  "inputs_schema": {}
+}

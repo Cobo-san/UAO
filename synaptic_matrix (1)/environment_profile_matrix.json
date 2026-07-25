@@ -1,0 +1,39 @@
+{
+  "account": "sounddharma@gmail.com",
+  "system_os": "Windows 11 (x64)",
+  "anaconda_environments": [
+    {
+      "name": "base",
+      "path": "C:\\ProgramData\\anaconda3",
+      "python_version": "3.13.9",
+      "package_count": 560,
+      "status": "HEALTHY_OPERATIONAL"
+    },
+    {
+      "name": "master-ai-workflow",
+      "path": "C:\\Users\\Monica Fugazi\\.conda\\envs\\master-ai-workflow",
+      "python_version": "3.11.15",
+      "package_count": 197,
+      "status": "HEALTHY_OPERATIONAL"
+    }
+  ],
+  "vscode_profiles_active": 15,
+  "configs_validated": [
+    "settings.json",
+    "config.json",
+    "mcp_config.json",
+    ".condarc",
+    ".env"
+  ],
+  "audited_user_profiles": [
+    "Monica Fugazi",
+    "Default",
+    "Default User",
+    "Public",
+    "sounddharma",
+    "fugazi",
+    "ntadministration",
+    "guests",
+    "yezir/Nga"
+  ]
+}

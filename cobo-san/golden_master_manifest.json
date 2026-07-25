@@ -2,8 +2,8 @@
   "account": "sounddharma@gmail.com",
   "gcp_project_id": "anaconda-google-project-sounddharma",
   "golden_image_status": "BAKED_SAVED_AND_VERIFIED",
-  "last_exported_utc": "2026-07-24T09:57:12Z",
-  "total_tables": 32,
-  "snapshot_filename": "snapshot_20260724_055712_complete_working_system_image.json",
+  "last_exported_utc": "2026-07-24T18:18:49Z",
+  "total_tables": 22,
+  "snapshot_filename": "snapshot_20260724_141849_complete_working_system_image.json",
   "system_type": "Anaconda Google Project Unified All-in-One Master Operational System Image"
 }

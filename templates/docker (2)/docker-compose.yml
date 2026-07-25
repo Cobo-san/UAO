@@ -1,0 +1,95 @@
+version: '3.8'
+
+services:
+  # 1. Master System Core Orchestrator & Live Terminal Server (Port 9999)
+  cobo-core-orchestrator:
+    build:
+      context: ../..
+      dockerfile: templates/docker/Dockerfile.core
+    container_name: cobo-core-orchestrator
+    restart: always
+    ports:
+      - "9999:9999"
+    environment:
+      - ACCOUNT_EMAIL=sounddharma@gmail.com
+      - GCP_PROJECT_ID=anaconda-google-project-sounddharma
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ../..:/app/living_repository:ro
+      - cobo_synaptic_matrix:/app/living_repository/synaptic_matrix
+    tmpfs:
+      - /tmp:rw,exec,nosuid,size=16G
+      - /dev/shm:rw,exec,nosuid,size=16G
+
+  # 2. Synaptic MCP Kernel Router (Ports 8080-8095)
+  cobo-synaptic-mcp-router:
+    build:
+      context: ../..
+      dockerfile: templates/docker/Dockerfile.core
+    container_name: cobo-synaptic-mcp-router
+    restart: always
+    command: python /app/living_repository/bin/unified_native_cloud_orchestrator.py
+    ports:
+      - "8080-8095:8080-8095"
+    depends_on:
+      - cobo-core-orchestrator
+    volumes:
+      - ../..:/app/living_repository:ro
+      - cobo_synaptic_matrix:/app/living_repository/synaptic_matrix
+    tmpfs:
+      - /tmp:rw,exec,nosuid,size=16G
+      - /dev/shm:rw,exec,nosuid,size=16G
+
+  # 3. Local LLM llama.cpp Inference Server (Port 8090)
+  cobo-llama-inference:
+    image: ghcr.io/ggerganov/llama.cpp:full
+    container_name: cobo-llama-inference
+    restart: always
+    command: --server -m /models/Llama-3.3-70B-Instruct-Q4_K_M.gguf --host 0.0.0.0 --port 8090 -c 4096
+    ports:
+      - "8090:8090"
+    volumes:
+      - D:/AI_Dedicated_Storage_Secondary/models_gguf_mirror:/models:ro
+    tmpfs:
+      - /tmp:rw,exec,nosuid,size=16G
+      - /dev/shm:rw,exec,nosuid,size=16G
+
+  # 4. AlmaLinux-10 OS Cluster Node (KVM DDR5 RAM Execution)
+  cobo-almalinux-cluster:
+    image: almalinux:10
+    container_name: cobo-almalinux-cluster
+    restart: always
+    command: tail -f /dev/null
+    volumes:
+      - ../..:/mnt/living_repository:ro
+    tmpfs:
+      - /tmp:rw,exec,nosuid,size=16G
+      - /dev/shm:rw,exec,nosuid,size=16G
+
+  # 5. Ubuntu 24.04 LTS OS Cluster Node (KVM DDR5 RAM Execution)
+  cobo-ubuntu-cluster:
+    image: ubuntu:24.04
+    container_name: cobo-ubuntu-cluster
+    restart: always
+    command: tail -f /dev/null
+    volumes:
+      - ../..:/mnt/living_repository:ro
+    tmpfs:
+      - /tmp:rw,exec,nosuid,size=16G
+      - /dev/shm:rw,exec,nosuid,size=16G
+
+  # 6. FreeBSD / Linux Desktop GUI Endpoint (RDP Port 3389)
+  cobo-freebsd-desktop:
+    build:
+      context: ../..
+      dockerfile: templates/docker/Dockerfile.desktop
+    container_name: cobo-freebsd-desktop
+    restart: always
+    ports:
+      - "3389:3389"
+    tmpfs:
+      - /tmp:rw,exec,nosuid,size=16G
+      - /dev/shm:rw,exec,nosuid,size=16G
+
+volumes:
+  cobo_synaptic_matrix:

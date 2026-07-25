@@ -29,12 +29,24 @@ def get_drive_target_path(drive_letter, filename):
     else:
         return f"E:\\AI_Dedicated_Storage_Tertiary\\models_gguf\\{filename}"
 
+def find_master_model(filename):
+    possible_paths = [
+        f"C:\\AI_Dedicated_Storage_1TB\\models_gguf\\{filename}",
+        f"D:\\AI_Dedicated_Storage_Secondary\\models_gguf_mirror\\{filename}",
+        f"E:\\AI_Dedicated_Storage_Tertiary\\models_gguf\\{filename}"
+    ]
+    for p in possible_paths:
+        if os.path.exists(p):
+            return p
+    return None
+
 def replicate_models_internally():
     print("=== HIGH-SPEED INTERNAL NVME MODEL REPLICATION ENGINE ===")
     replicated_count = 0
 
-    for filename, src_path in MODEL_SOURCES.items():
-        if not os.path.exists(src_path):
+    for filename in MODEL_SOURCES.keys():
+        src_path = find_master_model(filename)
+        if not src_path:
             print(f"[*] Master model '{filename}' is still downloading (waiting for master completion)...")
             continue
 
@@ -47,13 +59,15 @@ def replicate_models_internally():
                 continue
 
             os.makedirs(os.path.dirname(target_path), exist_ok=True)
-            if os.path.exists(target_path):
+            if os.path.exists(target_path) and os.path.getsize(target_path) == os.path.getsize(src_path):
                 print(f"  [=] Drive {drive} already has replica ({os.path.getsize(target_path)/1e9:.2f} GB): {target_path}")
                 continue
 
             print(f"  [*] Internal Replication: {src_path} -> {target_path} (High-Speed NVMe Bus)...")
             start_time = time.time()
             try:
+                if os.path.exists(target_path):
+                    os.chmod(target_path, 0o666) # unlock if replacing
                 shutil.copy2(src_path, target_path)
                 os.chmod(target_path, 0o444) # Lock Read-Only
                 elapsed = time.time() - start_time
