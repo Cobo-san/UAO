@@ -50,11 +50,16 @@ git init
 git remote add origin https://github.com/Cobo-san/UAO.git
 git pull origin main
 
-# 5. Execute 32-Byte Binary IPC Generation & Permissions
+# 5. Enforce Continuous Global Mirroring (Hourly Cron Job)
+echo "[*] Injecting Continuous Matrix Synchronization (Cron)..."
+(crontab -l 2>/dev/null; echo "0 * * * * cd /opt/UAO && git pull origin main && python3 /opt/UAO/bin/master_compile_and_build.py >> /var/log/uao_mirror_sync.log 2>&1") | crontab -
+
+# 6. Execute 32-Byte Binary IPC Generation & Permissions
 echo "[*] Generating Synaptic IPC Headers..."
 chmod +x /opt/UAO/bin/master_compile_and_build.py
 python3 /opt/UAO/bin/master_compile_and_build.py
 
 echo "=========================================================================="
 echo "  [OK] COBO-SAN LINUX KERNEL, MCP & ANACONDA STACKS SUCCESSFULLY DEPLOYED!"
+echo "  [+] CONTINUOUS HOURLY MIRROR SYNC ACTIVATED ACROSS THE GLOBE!           "
 echo "=========================================================================="
