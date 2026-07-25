@@ -18,8 +18,8 @@ except ImportError:
 UAO_MASTER_SALT = b"0x41494756"
 GOOGLE_DRIVE_DIR = r"C:\Users\Monica Fugazi\GoogleDrive_sounddharma\cobo-san"
 
-def get_encryption_key(password="sounddharma@gmail.com"):
-    """Derives a Fernet symmetric key from the Google Account string and the UAO Master Salt."""
+def get_encryption_key(password="sounddharma@gmail.com+fugazi@circadomine.com"):
+    """Derives a Fernet symmetric key from the Dual-Identity Master String and the UAO Salt."""
     kdf = PBKDF2HMAC(
         algorithm=hashes.SHA256(),
         length=32,
@@ -43,7 +43,7 @@ def encrypt_credentials(template_path, output_enc_path):
     with open(output_enc_path, "wb") as f:
         f.write(encrypted_data)
         
-    print(f"[+] SUCCESS: Credentials encrypted and secured to Google Drive: {output_enc_path}")
+    print(f"[+] SUCCESS: Dual-Identity Credentials encrypted to Google Drive: {output_enc_path}")
     return True
 
 def decrypt_credentials(enc_path):
@@ -58,7 +58,7 @@ def decrypt_credentials(enc_path):
     try:
         decrypted_data = fernet.decrypt(encrypted_data)
         creds = json.loads(decrypted_data.decode())
-        print(f"[+] SUCCESS: Decrypted Global Credentials from Google Drive via sounddharma@gmail.com")
+        print(f"[+] SUCCESS: Decrypted 14-Node Dual-Identity Matrix from Google Drive")
         return creds
     except Exception as e:
         print(f"[-] FATAL: Decryption failed. Incorrect key or corrupted matrix. {e}")
@@ -66,21 +66,18 @@ def decrypt_credentials(enc_path):
 
 if __name__ == "__main__":
     print("==========================================================================")
-    print("  LOCUTUS UAO: REAL-TIME SECURE GOOGLE DRIVE CREDENTIAL SYNC              ")
+    print("  LOCUTUS UAO: 14-NODE DUAL-IDENTITY CRYPTOGRAPHIC ENGINE                 ")
     print("==========================================================================")
     
     template = os.path.join(GOOGLE_DRIVE_DIR, "uao_global_credentials_template.json")
     enc_target = os.path.join(GOOGLE_DRIVE_DIR, "uao_cloud_credentials.enc")
     
     if os.path.exists(template):
-        print("[*] Found plain-text credential template. Encrypting and syncing to Google Drive...")
+        print("[*] Found plain-text 14-Node credential template. Encrypting to Google Drive...")
         encrypt_credentials(template, enc_target)
-        
-        # Security Feature: Shred the plain text template after encryption if requested
-        # For now, we leave it so the user can edit it.
-        print("[!] SECURITY WARNING: Please delete or secure the plain-text template after filling it out.")
+        print("[!] SECURITY WARNING: Please delete or secure the plain-text template.")
     else:
-        print("[*] No template found. Attempting to decrypt active matrix...")
+        print("[*] No template found. Attempting to decrypt active Dual-Identity matrix...")
         creds = decrypt_credentials(enc_target)
         if creds:
-            print("[+] Active Cloud Matrix Authorization Keys Loaded into Memory.")
+            print("[+] Active 14-Node Matrix Authorization Keys Loaded into Memory.")
