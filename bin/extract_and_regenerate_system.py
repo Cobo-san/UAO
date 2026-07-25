@@ -34,7 +34,8 @@ def regenerate_system():
             "build_locutus_data_matrix.py", "uao_execution_checklist.py", 
             "update_locutus_ownership.py", "Locutus_Training_Matrix.jsonl", 
             "locutus_neural_weights.sqlite", "uao_fastapi_gateway.py",
-            "pin_locutus_to_ecores.py", "evaluate_and_verify_global_apis.py"
+            "pin_locutus_to_ecores.py", "evaluate_and_verify_global_apis.py",
+            "linux_universal_cobo_san_installer.sh"
         ]:
             target_path = os.path.join(LOCUTUS_TARGET, filename)
             
