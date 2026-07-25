@@ -188,6 +188,7 @@ def main():
         r"C:\Locutus_UAO_Master_Environment\evaluate_and_verify_global_apis.py",
         r"C:\Locutus_UAO_Master_Environment\linux_universal_cobo_san_installer.sh",
         r"C:\Locutus_UAO_Master_Environment\provision_global_zero_cost_mirrors.py",
+        r"C:\Locutus_UAO_Master_Environment\uao_master_orchestrator.py",
         # Master System Images & Vectors
         os.path.join(paths["gdrive_golden"], "complete_master_system_and_dependencies_image.json"),
         os.path.join(paths["gdrive_golden"], "master_working_system_image.json"),
