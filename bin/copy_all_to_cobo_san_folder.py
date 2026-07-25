@@ -175,6 +175,16 @@ def main():
         os.path.join(paths["brain_artifacts"], "cobo_san_visual_comparison.md"),
         os.path.join(paths["living_repo"], "bin", "anaconda_full_ecosystem_integration.py"),
         os.path.join(paths["living_repo"], "scripts", "execute_linux_sata_recovery.py"),
+        # Locutus Master Files
+        r"C:\Locutus_UAO_Master_Environment\uao_chrome_interface_blueprint.md",
+        r"C:\Locutus_UAO_Master_Environment\locutus_independent_prompt.py",
+        r"C:\Locutus_UAO_Master_Environment\build_locutus_data_matrix.py",
+        r"C:\Locutus_UAO_Master_Environment\uao_execution_checklist.py",
+        r"C:\Locutus_UAO_Master_Environment\update_locutus_ownership.py",
+        r"C:\Locutus_UAO_Master_Environment\Locutus_Training_Matrix.jsonl",
+        r"C:\Locutus_UAO_Master_Environment\locutus_neural_weights.sqlite",
+        r"C:\Locutus_UAO_Master_Environment\uao_fastapi_gateway.py",
+        r"C:\Locutus_UAO_Master_Environment\pin_locutus_to_ecores.py",
         # Master System Images & Vectors
         os.path.join(paths["gdrive_golden"], "complete_master_system_and_dependencies_image.json"),
         os.path.join(paths["gdrive_golden"], "master_working_system_image.json"),

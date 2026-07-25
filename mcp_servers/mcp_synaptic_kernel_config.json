@@ -32,6 +32,84 @@
         "GCP_REGION": "us-west1",
         "ROUTING_MODE": "SYNAPTIC_MULTIPLEXED"
       }
+    },
+    "kernel_executive_director_mcp": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\hierarchical_multimodal_director_and_managers.py",
+        "--agent",
+        "agent_executive_director"
+      ],
+      "env": {
+        "AGENT_TYPE": "DIRECTOR",
+        "AGENT_PORT": "8090",
+        "ENGINE_MODEL": "Llama-3.3-70B-Instruct"
+      }
+    },
+    "kernel_voice_dialogue_mcp": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\hierarchical_multimodal_director_and_managers.py",
+        "--agent",
+        "agent_voice_manager"
+      ],
+      "env": {
+        "AGENT_TYPE": "MANAGER",
+        "AGENT_PORT": "8094",
+        "ENGINE_MODEL": "Whisper.cpp + Piper TTS Engine"
+      }
+    },
+    "kernel_vision_terminal_mcp": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\hierarchical_multimodal_director_and_managers.py",
+        "--agent",
+        "agent_vision_terminal_manager"
+      ],
+      "env": {
+        "AGENT_TYPE": "MANAGER",
+        "AGENT_PORT": "8096",
+        "ENGINE_MODEL": "LLaVA-v1.6 / Qwen2-VL Vision Engine"
+      }
+    },
+    "kernel_code_sdk_mcp": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\hierarchical_multimodal_director_and_managers.py",
+        "--agent",
+        "agent_code_sdk_manager"
+      ],
+      "env": {
+        "AGENT_TYPE": "MANAGER",
+        "AGENT_PORT": "8091",
+        "ENGINE_MODEL": "Qwen-2.5-Coder-32B"
+      }
+    },
+    "kernel_media_creation_mcp": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\hierarchical_multimodal_director_and_managers.py",
+        "--agent",
+        "agent_media_manager"
+      ],
+      "env": {
+        "AGENT_TYPE": "MANAGER",
+        "AGENT_PORT": "8097",
+        "ENGINE_MODEL": "FLUX.1-schnell + Meta MusicGen"
+      }
+    },
+    "kernel_cybersecurity_governance_mcp": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\Monica Fugazi\\.antigravity-ide\\living_repository\\bin\\hierarchical_multimodal_director_and_managers.py",
+        "--agent",
+        "agent_cybersecurity_director"
+      ],
+      "env": {
+        "AGENT_TYPE": "DIRECTOR_SECURITY",
+        "AGENT_PORT": "8092",
+        "ENGINE_MODEL": "DeepSeek-R1-70B Security Engine"
+      }
     }
   }
 }
