@@ -36,7 +36,8 @@ def regenerate_system():
             "locutus_neural_weights.sqlite", "uao_fastapi_gateway.py",
             "pin_locutus_to_ecores.py", "evaluate_and_verify_global_apis.py",
             "linux_universal_cobo_san_installer.sh", "provision_global_zero_cost_mirrors.py",
-            "uao_master_orchestrator.py", "uao_credential_manager.py"
+            "uao_master_orchestrator.py", "uao_credential_manager.py",
+            "wsl_local_integration_bridge.sh"
         ]:
             target_path = os.path.join(LOCUTUS_TARGET, filename)
             

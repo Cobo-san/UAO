@@ -190,6 +190,7 @@ def main():
         r"C:\Locutus_UAO_Master_Environment\provision_global_zero_cost_mirrors.py",
         r"C:\Locutus_UAO_Master_Environment\uao_master_orchestrator.py",
         r"C:\Locutus_UAO_Master_Environment\uao_credential_manager.py",
+        r"C:\Locutus_UAO_Master_Environment\wsl_local_integration_bridge.sh",
         # Master System Images & Vectors
         os.path.join(paths["gdrive_golden"], "complete_master_system_and_dependencies_image.json"),
         os.path.join(paths["gdrive_golden"], "master_working_system_image.json"),
