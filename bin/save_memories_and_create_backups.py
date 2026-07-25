@@ -101,7 +101,7 @@ def commit_git_repository(repo_dir):
     print("==========================================================================")
     try:
         subprocess.check_call("git add .", shell=True, cwd=repo_dir)
-        subprocess.check_call("git commit -m 'Master Memory Preservation, Package Re-Build, and Google Drive Backup Sync'", shell=True, cwd=repo_dir)
+        subprocess.check_call('git commit -m "Master Memory Preservation, Package Re-Build, and Google Drive Backup Sync"', shell=True, cwd=repo_dir)
         subprocess.check_call("git push", shell=True, cwd=repo_dir)
         print("  [+] Git Commit & Push Success: Master Memory Snapshot & Package Committed and Pushed to GitHub!")
     except Exception as e:
