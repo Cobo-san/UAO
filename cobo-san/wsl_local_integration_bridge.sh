@@ -41,12 +41,16 @@ fi
 # 4. Bootstrap 'uv' for rapid Anaconda-style environments within WSL
 echo "[*] Bootstrapping WSL Neural Environment..."
 curl -LsSf https://astral.sh/uv/install.sh | sh
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
 cd "$WIN_HOST_DIR"
-uv venv .venv_wsl
-source .venv_wsl/bin/activate
-uv pip install fastapi uvicorn sqlite-utils psutil requests aiohttp cryptography
+OS_ID=$(cat /etc/os-release | grep -E "^ID=" | cut -d'=' -f2 | tr -d '"')
+VENV_DIR=".venv_wsl_${OS_ID}"
+
+echo "[*] Initializing dedicated matrix environment: $VENV_DIR"
+$HOME/.local/bin/uv venv "$VENV_DIR"
+source "$VENV_DIR/bin/activate"
+$HOME/.local/bin/uv pip install fastapi uvicorn sqlite-utils psutil requests aiohttp cryptography
 
 # 5. Execute Local Mirror Synchronization
 echo "[*] Executing Local WSL Compilation Matrix..."

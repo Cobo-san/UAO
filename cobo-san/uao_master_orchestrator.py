@@ -4,7 +4,8 @@ import time
 import sys
 
 def run_script(script_name):
-    script_path = os.path.join(r"C:\Locutus_UAO_Master_Environment", script_name)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    script_path = os.path.join(script_dir, script_name)
     if not os.path.exists(script_path):
         print(f"[-] ERROR: UAO Core Module Missing: {script_name}")
         return False
@@ -39,7 +40,8 @@ def main():
     print("==========================================================================")
     
     # Step 4: Boot up the Neural API Gateway
-    gateway_path = os.path.join(r"C:\Locutus_UAO_Master_Environment", "uao_fastapi_gateway.py")
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    gateway_path = os.path.join(script_dir, "uao_fastapi_gateway.py")
     if os.path.exists(gateway_path):
         subprocess.Popen([sys.executable, gateway_path])
         print("[+] FastAPI Gateway active on port 8000. UAO is fully online and listening.")
