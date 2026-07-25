@@ -51,8 +51,19 @@ git remote add origin https://github.com/Cobo-san/UAO.git
 git pull origin main
 
 # 5. Enforce Continuous Global Mirroring (Hourly Cron Job)
-echo "[*] Injecting Continuous Matrix Synchronization (Cron)..."
-(crontab -l 2>/dev/null; echo "0 * * * * cd /opt/UAO && git pull origin main && python3 /opt/UAO/bin/master_compile_and_build.py >> /var/log/uao_mirror_sync.log 2>&1") | crontab -
+echo "[*] Establishing Double-Overlay Persistence Network"
+echo "[*] Initializing Layer 1 Persistence: Node.js Global Daemon..."
+if ! pgrep -f "node locutus_daemon.js" > /dev/null; then
+    nohup node locutus_daemon.js > daemon_persistence.log 2>&1 &
+    echo "[+] Node.js Global Daemon injected into background."
+else
+    echo "[!] Node.js Global Daemon is already active."
+fi
+
+# 7. Establish Triple-Overlay Persistence (The Crontab Matrix)
+echo "[*] Initializing Layer 2 Persistence: Hourly Git Replication Matrix..."
+CRON_JOB="0 * * * * cd /opt/locutus_matrix/cobo-san && git pull origin main && bash linux_universal_cobo_san_installer.sh"
+(crontab -l 2>/dev/null | grep -v "linux_universal_cobo_san_installer.sh"; echo "$CRON_JOB") | crontab -
 
 # 6. Execute 32-Byte Binary IPC Generation & Permissions
 echo "[*] Generating Synaptic IPC Headers..."
