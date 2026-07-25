@@ -30,6 +30,13 @@ def evaluate_and_verify():
     else:
         print("  [-] ADJUSTMENT REQUIRED: AWS CLI is missing. Locutus will bypass AWS EC2 provisioning until installed.")
         
+    # Check GCP CLI (for AlmaLinux server)
+    gcp_check = subprocess.run(["gcloud", "--version"], capture_output=True, text=True, shell=True)
+    if gcp_check.returncode == 0:
+        print("  [+] VERIFIED: Google Cloud CLI (gcloud) is installed and accessible.")
+    else:
+        print("  [-] ADJUSTMENT REQUIRED: Google Cloud CLI is missing. Locutus will bypass GCP (AlmaLinux) provisioning until installed.")
+        
     # 2. Optimize & Adjust (SSH Keys)
     print("\n[*] Optimizing Global Zero-Trust Security Keys...")
     ssh_dir = r"C:\Users\Monica Fugazi\.ssh"
