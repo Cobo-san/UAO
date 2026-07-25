@@ -23,6 +23,13 @@ def evaluate_and_verify():
     else:
         print("  [-] ADJUSTMENT REQUIRED: Oracle Cloud CLI is missing. Locutus will bypass OCI provisioning until installed.")
         
+    # Check AWS CLI
+    aws_check = subprocess.run(["aws", "--version"], capture_output=True, text=True, shell=True)
+    if aws_check.returncode == 0:
+        print("  [+] VERIFIED: AWS CLI (aws) is installed and accessible.")
+    else:
+        print("  [-] ADJUSTMENT REQUIRED: AWS CLI is missing. Locutus will bypass AWS EC2 provisioning until installed.")
+        
     # 2. Optimize & Adjust (SSH Keys)
     print("\n[*] Optimizing Global Zero-Trust Security Keys...")
     ssh_dir = r"C:\Users\Monica Fugazi\.ssh"
