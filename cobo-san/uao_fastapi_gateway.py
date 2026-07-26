@@ -6,10 +6,10 @@ import os
 
 app = FastAPI(title="Locutus UAO Neural Gateway", version="1.0")
 
-# Enable CORS for the Chrome/Mobile Web Interface
+# Secure CORS: Strictly allow local web interface (Zero-Trust)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins for local dev
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -57,4 +57,4 @@ def get_neural_logs():
 
 if __name__ == "__main__":
     print("[+] UAO Neural FastAPI Gateway Initializing...")
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8000)
