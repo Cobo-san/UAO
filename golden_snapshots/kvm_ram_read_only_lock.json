@@ -1,0 +1,7 @@
+{
+  "kvm_memory_mode": "READ_ONLY_IN_RAM",
+  "kvm_shm_target": "/dev/shm/kimi_k27_ram_lock",
+  "ram_alloc_gb": 16,
+  "write_protection": "ENFORCED_READ_ONLY",
+  "timestamp": 1785444410.2175972
+}
