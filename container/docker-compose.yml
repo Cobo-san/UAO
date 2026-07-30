@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  qenta_iis_webapp:
+    build:
+      context: ..
+      dockerfile: container/Dockerfile
+    container_name: qenta_prime_iis_webapp
+    ports:
+      - "8088:8088"
+      - "8443:8443"
+    environment:
+      - ACCOUNT_EMAIL=sounddharma@gmail.com
+      - GCP_PROJECT_ID=anaconda-google-project-sounddharma
+      - ZERO_COST_LOCK=1
+    restart: always
+
+  anaconda_server_platform:
+    build:
+      context: ..
+      dockerfile: container/Dockerfile
+    container_name: anaconda_server_ai_platform
+    ports:
+      - "8099:8099"
+      - "8091:8091"
+    command: ["python", "/app/living_repository/bin/anaconda_server_ai_platform_stack.py"]
+
+  locutus_neural_gateway:
+    build:
+      context: ..
+      dockerfile: container/Dockerfile
+    container_name: locutus_neural_gateway
+    ports:
+      - "8081:8081"
+      - "8092:8092"
+    command: ["python", "/app/living_repository/bin/hierarchical_multimodal_director_and_managers.py"]
