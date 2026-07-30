@@ -17,6 +17,7 @@ service_account.json
 *.qcow2
 
 # Database WAL & Cache Files
+*.sqlite
 *.sqlite-wal
 *.sqlite-shm
 __pycache__/

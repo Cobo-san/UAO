@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QENTA-PRIME Unified Assembly Orchestration IIS Web Application Dashboard. Real-time telemetry, multi-modal audio/vision console, AVX2 SIMD INT4 hardware accelerator, and matrix database explorer.">
+    <title>QENTA-PRIME — Unified Assembly Orchestration (IIS Web App)</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Styling -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <header class="navbar">
+        <div class="brand-container">
+            <div class="brand-logo">
+                <i class="fa-solid fa-atom"></i>
+            </div>
+            <div>
+                <h1 class="brand-title">QENTA-PRIME UAO</h1>
+                <div class="brand-subtitle">Unified Assembly Orchestrator — Windows IIS Master Web App</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <div class="nav-status-badge">
+                <div class="status-dot"></div>
+                <span id="iis-server-status">IIS SERVER ONLINE (PORT 8088)</span>
+            </div>
+            <div style="font-size: 12px; color: var(--text-muted);">
+                Account: <strong style="color: var(--primary-accent);">sounddharma@gmail.com</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container">
+
+        <!-- Top Metrics Cards Grid -->
+        <section class="metrics-grid">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">SIMD Accelerator</span>
+                    <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+                </div>
+                <div class="card-value" id="avx2-status">CYLINDER_18</div>
+                <div class="card-subtext"><i class="fa-solid fa-bolt"></i> AVX2 INT4 Kernel Armed (< 0.95 ms)</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Agent Cluster</span>
+                    <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+                </div>
+                <div class="card-value" id="locutus-agents">12 Locutus Agents</div>
+                <div class="card-subtext"><i class="fa-solid fa-check"></i> 5 Active Clusters Operational</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Exo P2P Mesh</span>
+                    <div class="card-icon"><i class="fa-solid fa-cubes"></i></div>
+                </div>
+                <div class="card-value" id="exo-status">Port 50050</div>
+                <div class="card-subtext"><i class="fa-solid fa-circle-check"></i> 4 P2P Nodes Connected</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Financial Guarantee</span>
+                    <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                </div>
+                <div class="card-value">$0.00 FREE</div>
+                <div class="card-subtext"><i class="fa-solid fa-database"></i> Dual NVMe (14,000+ MB/s)</div>
+            </div>
+        </section>
+
+        <!-- Navigation Tabs -->
+        <nav class="tabs-nav">
+            <button class="tab-btn active" onclick="switchTab('orchestrator-tab')"><i class="fa-solid fa-sliders"></i> Master Control Panel</button>
+            <button class="tab-btn" onclick="switchTab('multimodal-tab')"><i class="fa-solid fa-microphone-lines"></i> Voice & Vision Console</button>
+            <button class="tab-btn" onclick="switchTab('database-tab')"><i class="fa-solid fa-database"></i> Matrix Explorer (43 DBs)</button>
+            <button class="tab-btn" onclick="switchTab('vms-tab')"><i class="fa-solid fa-server"></i> Golden VM Templates (Alma & BSD)</button>
+        </nav>
+
+        <!-- Tab 1: Master Orchestrator Control Panel -->
+        <section id="orchestrator-tab" class="tab-content active">
+            <div class="dashboard-grid">
+
+                <!-- Control Buttons Card -->
+                <div class="card">
+                    <h2 style="font-family: 'Outfit'; font-size: 18px; margin-bottom: 16px;"><i class="fa-solid fa-terminal"></i> Assembly Orchestration Actions</h2>
+                    <div class="controls-grid">
+                        <button class="btn-action" id="btn-master-build" onclick="runCommand('master-build')">
+                            <i class="fa-solid fa-play"></i> Run Master Build
+                        </button>
+                        <button class="btn-action" id="btn-save-yta" onclick="runCommand('save-yta')">
+                            <i class="fa-solid fa-floppy-disk"></i> Lock VPA.yta State
+                        </button>
+                        <button class="btn-action" id="btn-check-echo" onclick="runCommand('check-echo')">
+                            <i class="fa-solid fa-satellite-dish"></i> Live Echo Sweep
+                        </button>
+                        <button class="btn-action" id="btn-freebsd-smash" onclick="runCommand('freebsd-smash')">
+                            <i class="fa-solid fa-hard-drive"></i> E: Drive FreeBSD Check
+                        </button>
+                    </div>
+
+                    <h3 style="font-family: 'Outfit'; font-size: 15px; margin-top: 24px; margin-bottom: 12px;"><i class="fa-solid fa-layer-group"></i> Active GCP Regional Free-Tier Locks</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>OS Distro / Node</th>
+                                <th>Locked GCP Region</th>
+                                <th>Machine Bounds</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Windows 11 Host</td>
+                                <td><code>us-east1</code> (South Carolina)</td>
+                                <td>e2-micro (100% Free)</td>
+                                <td><span style="color: var(--secondary-accent); font-weight: bold;">LOCKED</span></td>
+                            </tr>
+                            <tr>
+                                <td>AlmaLinux-10 WSL2</td>
+                                <td><code>us-central1</code> (Iowa)</td>
+                                <td>e2-micro (100% Free)</td>
+                                <td><span style="color: var(--secondary-accent); font-weight: bold;">LOCKED</span></td>
+                            </tr>
+                            <tr>
+                                <td>Ubuntu WSL2 Node</td>
+                                <td><code>us-west1</code> (Oregon)</td>
+                                <td>e2-micro (100% Free)</td>
+                                <td><span style="color: var(--secondary-accent); font-weight: bold;">LOCKED</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Real-Time Terminal Log Output -->
+                <div class="card">
+                    <h2 style="font-family: 'Outfit'; font-size: 18px; margin-bottom: 14px;"><i class="fa-solid fa-code"></i> Live Telemetry Terminal</h2>
+                    <div class="console-box" id="terminal-console">
+                        <div class="console-line info">[SYS] QENTA-PRIME UAO Web Application Initialized.</div>
+                        <div class="console-line success">[OK] IIS Web Server listening on http://localhost:8088</div>
+                        <div class="console-line info">[AVX2] INT4 GEMV CYLINDER_18 ARMED on Intel Core i9-14900K</div>
+                        <div class="console-line success">[DB] 43 Matrix Database Tables synced with Google Drive.</div>
+                        <div class="console-line info">[EXO] P2P Router listening on Port 50050 (4 Nodes).</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tab 2: Voice & Vision Console -->
+        <section id="multimodal-tab" class="tab-content">
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h2 style="font-family: 'Outfit'; font-size: 18px; margin-bottom: 14px;"><i class="fa-solid fa-waveform"></i> Voice STT / TTS Interactive Loop</h2>
+                    <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px;">
+                        Whisper STT (Port 8094, < 45 ms) + Piper TTS (Port 8095, < 60 ms). Voice mode: <em>"You speak, Antigravity speaks back"</em>.
+                    </p>
+                    <canvas id="audio-waveform"></canvas>
+                    <div style="display: flex; gap: 12px; margin-top: 16px;">
+                        <button class="btn-action" onclick="toggleVoiceLoop()" id="btn-voice-toggle"><i class="fa-solid fa-microphone"></i> Activate Voice Loop</button>
+                        <button class="btn-action" onclick="testTTS()"><i class="fa-solid fa-volume-high"></i> Test Piper Voice Synthesis</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 style="font-family: 'Outfit'; font-size: 18px; margin-bottom: 14px;"><i class="fa-solid fa-eye"></i> Terminal Vision OCR Inspector</h2>
+                    <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 12px;">LLaVA-v1.6 Vision Engine (Port 8096) active for screenshot OCR.</p>
+                    <div style="background: #06090e; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px; text-align: center;">
+                        <i class="fa-solid fa-desktop" style="font-size: 32px; color: var(--primary-accent); margin-bottom: 10px;"></i>
+                        <p style="font-size: 12px; color: var(--text-muted);">Multi-Terminal Screen Reader Ready</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 3: Database & Matrix Explorer -->
+        <section id="database-tab" class="tab-content">
+            <div class="card">
+                <h2 style="font-family: 'Outfit'; font-size: 18px; margin-bottom: 14px;"><i class="fa-solid fa-magnifying-glass"></i> SQLite Matrix & Vector Database Explorer</h2>
+                <input type="text" id="db-search-input" placeholder="Search across 43 tables, 1,742 chat items, and 1,679 RAG vectors..." style="width: 100%; padding: 12px 16px; background: #06090e; border: 1px solid var(--border-color); border-radius: var(--radius-md); color: var(--text-main); font-family: 'Inter', sans-serif; font-size: 14px; margin-bottom: 16px;" onkeyup="filterDatabaseTable()">
+                
+                <table class="data-table" id="matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Table Name</th>
+                            <th>Category</th>
+                            <th>Record Count</th>
+                            <th>Primary Storage Path</th>
+                            <th>Mirror Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>google_spark_chats_matrix</code></td>
+                            <td>Spark Chat Vault</td>
+                            <td><strong>1,742</strong> Records</td>
+                            <td><code>living_repository/synaptic_matrix/</code></td>
+                            <td><span style="color: var(--secondary-accent);">Google Drive Synced</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>anaconda_vector_db</code></td>
+                            <td>RAG Embeddings</td>
+                            <td><strong>1,679</strong> Embeddings</td>
+                            <td><code>C:\AI_Dedicated_Storage_1TB\</code></td>
+                            <td><span style="color: var(--secondary-accent);">Google Drive Synced</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>mcp_synaptic_routes</code></td>
+                            <td>MCP Gateway</td>
+                            <td><strong>107</strong> Routes</td>
+                            <td><code>mcp_servers/</code></td>
+                            <td><span style="color: var(--secondary-accent);">Google Drive Synced</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>locutus_agent_cluster</code></td>
+                            <td>Agent Structural Matrix</td>
+                            <td><strong>12</strong> Agents</td>
+                            <td><code>locutus_neural_weights.sqlite</code></td>
+                            <td><span style="color: var(--secondary-accent);">Google Drive Synced</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>universal_vm_sandbox_registry</code></td>
+                            <td>VM Templates</td>
+                            <td><strong>2</strong> VM Golden Templates</td>
+                            <td><code>C:\AI_Dedicated_Storage_1TB\Golden_VM_Templates\</code></td>
+                            <td><span style="color: var(--secondary-accent);">Google Drive Synced</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Tab 4: Golden VM Templates -->
+        <section id="vms-tab" class="tab-content">
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h2 style="font-family: 'Outfit'; font-size: 18px; margin-bottom: 10px;"><i class="fa-brands fa-linux"></i> AlmaLinux-10 Enterprise AI Compute VM</h2>
+                    <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 14px;">Pre-installed with GCC 14.3.1, CMake 3.31.8, Python 3.12, and AVX2 SIMD INT4 headers.</p>
+                    <p>Virtual Disk: <code>C:\AI_Dedicated_Storage_1TB\Golden_VM_Templates\AlmaLinux10_Golden_VM\AlmaLinux10_Golden_VM_Template.vhdx</code></p>
+                    <p>Allocated Resources: <strong>8 Cores / 8,192 MB RAM</strong></p>
+                    <p style="margin-top: 10px;">Status: <span style="color: var(--secondary-accent); font-weight: bold;">READY_FOR_FUTURE_INSTALLATION</span></p>
+                </div>
+
+                <div class="card">
+                    <h2 style="font-family: 'Outfit'; font-size: 18px; margin-bottom: 10px;"><i class="fa-solid fa-shield-cat"></i> FreeBSD 14.1 Hardened Bare-Metal VM</h2>
+                    <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 14px;">Kernel locked with <code>kern.securelevel=2</code> and <code>security.bsd.hardened=YES</code>.</p>
+                    <p>Virtual Disk: <code>C:\AI_Dedicated_Storage_1TB\Golden_VM_Templates\FreeBSD14_Hardened_VM\FreeBSD14.1_Hardened_VM_Template.vhdx</code></p>
+                    <p>Allocated Resources: <strong>4 Cores / 4,096 MB RAM</strong></p>
+                    <p style="margin-top: 10px;">Status: <span style="color: var(--secondary-accent); font-weight: bold;">READY_FOR_FUTURE_INSTALLATION</span></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        QENTA-PRIME & UAO Master Unified Assembly Orchestrator — Running natively on Windows IIS (Port 8088) | $0.00 Financial Cost Guarantee
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script src="app.js"></script>
+</body>
+</html>

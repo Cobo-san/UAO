@@ -1,0 +1,16 @@
+# Hardened FreeBSD 15 Bare-Metal Disk Formatting & Auto-Installer Configuration
+PARTITIONS=DEFAULT
+DISTRIBUTIONS="base.txz kernel.txz src.txz"
+ZFS_AUTO=YES
+ZFS_POOL_NAME=zroot_h_drive
+
+# Kernel Security Controls & Extensions
+sysrc kern.securelevel=2
+sysrc security.bsd.hardened=YES
+sysrc dbus_enable="YES"
+sysrc sddm_enable="YES"
+sysrc xrdp_enable="YES"
+sysrc kld_list+="i915kms fusefs linux64"
+
+# Execute Anaconda Smashed Stack First
+python3 /mnt/h/Hardened_FreeBSD15_Metal_Anaconda_Stack/anaconda_h_drive_smash_execution.py

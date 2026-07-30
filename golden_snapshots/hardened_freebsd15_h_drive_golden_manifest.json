@@ -1,0 +1,12 @@
+{
+  "target_bus": "Drive H:",
+  "os_distro": "FreeBSD 15.0 Hardened Kernel",
+  "disk_format_plan": "Full Disk ZFS Format (zroot_h_drive)",
+  "security_flags": [
+    "kern.securelevel=2",
+    "security.bsd.hardened=YES"
+  ],
+  "anaconda_stack_execution": "FIRST_PRIORITY_SMASHED",
+  "status": "HARDENED_FREEBSD15_H_DRIVE_ANACONDA_SMASHED",
+  "timestamp_utc": "2026-07-30 18:06:54"
+}

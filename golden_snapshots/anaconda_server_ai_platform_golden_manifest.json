@@ -1,0 +1,21 @@
+{
+  "build_id": "anaconda_server_ai_platform_v1",
+  "account_email": "sounddharma@gmail.com",
+  "gcp_project_id": "anaconda-google-project-sounddharma",
+  "server_port": 8099,
+  "smashed_mcp_routes": [
+    "mcp_route_anaconda_hub",
+    "mcp_route_anaconda_platform",
+    "mcp_route_anaconda_psm",
+    "mcp_route_anaconda_vector_db"
+  ],
+  "spark_chat_urls": {
+    "spark_chat_vault_url": "http://localhost:8088/gemini_spark_chats_vault/",
+    "anaconda_spark_transcript_url": "http://localhost:8088/gemini_spark_chats_vault/rebuilt_anaconda_spark_chat_transcript.md",
+    "spark_chat_matrix_api": "http://localhost:8099/api/spark_chat_matrix",
+    "iis_spark_dashboard_url": "http://localhost:8088/index.html#database-tab"
+  },
+  "rag_vectors": 1679,
+  "status": "ANACONDA_SERVER_AI_PLATFORM_SMASHED_AND_ACTIVE",
+  "timestamp_utc": "2026-07-30 18:00:47"
+}
