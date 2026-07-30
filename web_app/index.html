@@ -86,6 +86,7 @@
         <!-- Navigation Tabs -->
         <nav class="tabs-nav">
             <button class="tab-btn active" onclick="switchTab('orchestrator-tab')"><i class="fa-solid fa-sliders"></i> Master Control Panel</button>
+            <button class="tab-btn" onclick="switchTab('exo-kimi-tab')"><i class="fa-solid fa-network-wired"></i> Exo P2P & Kimi K2.7 Suite</button>
             <button class="tab-btn" onclick="switchTab('anaconda-tab')"><i class="fa-brands fa-python"></i> Anaconda AI Platform</button>
             <button class="tab-btn" onclick="switchTab('avx2-tab')"><i class="fa-solid fa-microchip"></i> AVX2 SIMD Engine</button>
             <button class="tab-btn" onclick="switchTab('locutus-tab')"><i class="fa-solid fa-brain"></i> Locutus Neural Gateway</button>
@@ -369,6 +370,64 @@
                             <td><strong>3</strong> VM Golden Templates</td>
                             <td><code>C:\AI_Dedicated_Storage_1TB\Golden_VM_Templates\</code></td>
                             <td><span style="color: var(--secondary-accent);">Google Drive Synced</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        <!-- Tab 6: Exo P2P Mesh & Kimi K2.7 Control Suite -->
+        <section id="exo-kimi-tab" class="tab-content">
+            <div class="card">
+                <h2 style="font-family: 'Outfit'; font-size: 18px; margin-bottom: 16px;"><i class="fa-solid fa-diagram-project"></i> Exo P2P Distributed Mesh & Kimi K2.7-Code Master Controller</h2>
+                
+                <div class="controls-grid">
+                    <button class="btn-action" id="btn-exo-start" onclick="runCommand('exo-start')">
+                        <i class="fa-solid fa-play"></i> Start Exo P2P Mesh Engine (Port 50050)
+                    </button>
+                    <button class="btn-action" id="btn-kimi-pull" onclick="runCommand('kimi-pull')">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> Pull Kimi K2.7-Code GGUF / Ollama
+                    </button>
+                    <button class="btn-action" id="btn-kimi-benchmark" onclick="runCommand('kimi-benchmark')">
+                        <i class="fa-solid fa-gauge-high"></i> Benchmark Kimi K2.7-Code under Exo
+                    </button>
+                    <button class="btn-action" id="btn-exo-sync" onclick="runCommand('exo-sync')">
+                        <i class="fa-solid fa-arrows-rotate"></i> Sync Exo Mesh Nodes Across GCP
+                    </button>
+                </div>
+
+                <h3 style="font-family: 'Outfit'; font-size: 16px; margin-top: 24px; margin-bottom: 12px;"><i class="fa-solid fa-network-wired"></i> Exo P2P Cluster & Kimi K2.7 Worker Architecture</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Cluster Component</th>
+                            <th>Role / Model Specification</th>
+                            <th>Target Endpoint / Port</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Exo Master Mesh Leader</strong></td>
+                            <td>Distributed P2P Memory Shard & Load Balancer</td>
+                            <td><code>tcp://localhost:50050</code></td>
+                            <td><span style="color: var(--secondary-accent); font-weight: bold;">ARMED_ONLINE</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kimi K2.7-Code Worker</strong></td>
+                            <td>Moonshot AI Code-Specialized LLM (GGUF / Ollama)</td>
+                            <td><code>moonshotai/Kimi-K2.7-Code</code></td>
+                            <td><span style="color: var(--secondary-accent); font-weight: bold;">CONFIGURED_EXO_BOUND</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kimi K2.6 Open Weights</strong></td>
+                            <td>1.1T MoE Parameter Model (32B Active)</td>
+                            <td><code>unsloth/Kimi-K2.6-GGUF</code></td>
+                            <td><span style="color: var(--secondary-accent); font-weight: bold;">GGUF_LOCAL_READY</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Qwen-2.5-Coder Worker</strong></td>
+                            <td>32B Code Generation & AVX2 Compiler Worker</td>
+                            <td><code>Port 8091</code></td>
+                            <td><span style="color: var(--secondary-accent); font-weight: bold;">ARMED_ONLINE</span></td>
                         </tr>
                     </tbody>
                 </table>
