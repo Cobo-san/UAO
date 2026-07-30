@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QENTA-PRIME Unified Assembly Orchestration IIS Web Application. Integrated with Anaconda AI Platform Server, AVX2 SIMD INT4 CYLINDER_18 Kernel, and Locutus Neural Gateway.">
+    <title>QENTA-PRIME — Unified Assembly Orchestrator (Anaconda, AVX2 & Locutus Web App)</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Styling -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <header class="navbar">
+        <div class="brand-container">
+            <div class="brand-logo">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+            <div>
+                <h1 class="brand-title">QENTA-PRIME UAO</h1>
+                <div class="brand-subtitle">Anaconda Server AI Platform • AVX2 CYLINDER_18 • Locutus Neural Gateway</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <div class="nav-status-badge">
+                <div class="status-dot"></div>
+                <span id="iis-server-status">IIS WEB APP LIVE (PORT 8088)</span>
+            </div>
+            <div style="font-size: 12px; color: var(--text-muted);">
+                Account: <strong style="color: var(--primary-accent);">sounddharma@gmail.com</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container">
+
+        <!-- Top Metrics Cards Grid -->
+        <section class="metrics-grid">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">AVX2 SIMD INT4</span>
+                    <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+                </div>
+                <div class="card-value" id="avx2-status">CYLINDER_18</div>
+                <div class="card-subtext"><i class="fa-solid fa-bolt"></i> Intel i9-14900K (< 0.95 ms GEMV)</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Locutus Neural Gateway</span>
+                    <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+                </div>
+                <div class="card-value" id="locutus-agents">12 Agents Active</div>
+                <div class="card-subtext"><i class="fa-solid fa-database"></i> locutus_neural_weights.sqlite</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Anaconda Server AI</span>
+                    <div class="card-icon"><i class="fa-brands fa-python"></i></div>
+                </div>
+                <div class="card-value" id="anaconda-status">Port 8099</div>
+                <div class="card-subtext"><i class="fa-solid fa-circle-check"></i> 4 Smashed MCP Server Routes</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Financial Guarantee</span>
+                    <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                </div>
+                <div class="card-value">$0.00 FREE</div>
+                <div class="card-subtext"><i class="fa-solid fa-hard-drive"></i> Dual NVMe Bus (14,000+ MB/s)</div>
+            </div>
+        </section>
+
+        <!-- Navigation Tabs -->
+        <nav class="tabs-nav">
+            <button class="tab-btn active" onclick="switchTab('orchestrator-tab')"><i class="fa-solid fa-sliders"></i> Master Control Panel</button>
+            <button class="tab-btn" onclick="switchTab('anaconda-tab')"><i class="fa-brands fa-python"></i> Anaconda AI Platform</button>
+            <button class="tab-btn" onclick="switchTab('avx2-tab')"><i class="fa-solid fa-microchip"></i> AVX2 SIMD Engine</button>
+            <button class="tab-btn" onclick="switchTab('locutus-tab')"><i class="fa-solid fa-brain"></i> Locutus Neural Gateway</button>
+            <button class="tab-btn" onclick="switchTab('database-tab')"><i class="fa-solid fa-database"></i> Matrix Explorer (43 DBs)</button>
+        </nav>
+
+        <!-- Tab 1: Master Orchestrator Control Panel -->
+        <section id="orchestrator-tab" class="tab-content active">
+            <div class="dashboard-grid">
+
+                <div class="card">
+                    <h2 style="font-family: 'Outfit'; font-size: 18px; margin-bottom: 16px;"><i class="fa-solid fa-terminal"></i> Assembly Orchestration Actions</h2>
+                    <div class="controls-grid">
+                        <button class="btn-action" id="btn-master-build" onclick="runCommand('master-build')">
+                            <i class="fa-solid fa-play"></i> Run Master Build
+                        </button>
+                        <button class="btn-action" id="btn-save-yta" onclick="runCommand('save-yta')">
+                            <i class="fa-solid fa-floppy-disk"></i> Lock VPA.yta State
+                        </button>
+                        <button class="btn-action" id="btn-check-echo" onclick="runCommand('check-echo')">
+                            <i class="fa-solid fa-satellite-dish"></i> Live Echo Sweep
+                        </button>
+                        <button class="btn-action" id="btn-freebsd-smash" onclick="runCommand('freebsd-smash')">
+                            <i class="fa-solid fa-hard-drive"></i> Drive H: FreeBSD 15 Check
+                        </button>
+                    </div>
+
+                    <h3 style="font-family: 'Outfit'; font-size: 15px; margin-top: 24px; margin-bottom: 12px;"><i class="fa-solid fa-layer-group"></i> Active GCP Regional Free-Tier Locks</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>OS Distro / Node</th>
+                                <th>Locked GCP Region</th>
+                                <th>Machine Bounds</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Windows 11 Host</td>
+                                <td><code>us-east1</code> (South Carolina)</td>
+                                <td>e2-micro (100% Free)</td>
+                                <td><span style="color: var(--secondary-accent); font-weight: bold;">LOCKED</span></td>
+                            </tr>
+                            <tr>
+                                <td>AlmaLinux-10 WSL2</td>
+                                <td><code>us-central1</code> (Iowa)</td>
+                                <td>e2-micro (100% Free)</td>
+                                <td><span style="color: var(--secondary-accent); font-weight: bold;">LOCKED</span></td>
+                            </tr>
+                            <tr>
+                                <td>Ubuntu WSL2 Node</td>
+                                <td><code>us-west1</code> (Oregon)</td>
+                                <td>e2-micro (100% Free)</td>
+                                <td><span style="color: var(--secondary-accent); font-weight: bold;">LOCKED</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h2 style="font-family: 'Outfit'; font-size: 18px; margin-bottom: 14px;"><i class="fa-solid fa-code"></i> Live Telemetry Terminal</h2>
+                    <div class="console-box" id="terminal-console">
+                        <div class="console-line info">[SYS] QENTA-PRIME UAO Web Application Initialized.</div>
+                        <div class="console-line success">[OK] IIS Web Server listening on http://localhost:8088</div>
+                        <div class="console-line info">[ANACONDA] AI Platform Server bound on Port 8099.</div>
+                        <div class="console-line success">[AVX2] INT4 GEMV CYLINDER_18 ARMED on Intel Core i9-14900K.</div>
+                        <div class="console-line info">[LOCUTUS] 12-Agent Neural Gateway Active (locutus_neural_weights.sqlite).</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tab 2: Anaconda Server AI Platform -->
+        <section id="anaconda-tab" class="tab-content">
+            <div class="card">
+                <h2 style="font-family: 'Outfit'; font-size: 18px; margin-bottom: 14px;"><i class="fa-brands fa-python"></i> Anaconda Server AI Platform & Smashed MCP Stack</h2>
+                <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px;">
+                    Integrates Anaconda Main Hub, Enterprise Agent Studio, Package Security Manager (PSM On-Prem), and Spark Chat Knowledge Vault.
+                </p>
+
+                <div class="controls-grid" style="margin-bottom: 20px;">
+                    <button class="btn-action" onclick="window.open('/gemini_spark_chats_vault/rebuilt_anaconda_spark_chat_transcript.md', '_blank')">
+                        <i class="fa-solid fa-file-code"></i> View Spark Chat Transcript
+                    </button>
+                    <button class="btn-action" onclick="runCommand('anaconda-sync')">
+                        <i class="fa-solid fa-arrows-rotate"></i> Sync Anaconda MCP Routes
+                    </button>
+                </div>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>MCP Route ID</th>
+                            <th>Target Component</th>
+                            <th>Port</th>
+                            <th>Synaptic Destination</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>mcp_route_anaconda_hub</code></td>
+                            <td>Anaconda Cloud Hub Gateway</td>
+                            <td><strong>8099</strong></td>
+                            <td>ANACONDA_SERVER_AI_PLATFORM</td>
+                            <td><span style="color: var(--secondary-accent); font-weight: bold;">ACTIVE_VERIFIED</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>mcp_route_anaconda_platform</code></td>
+                            <td>Anaconda Agent Studio Models</td>
+                            <td><strong>8091</strong></td>
+                            <td>ANACONDA_AGENT_STUDIO</td>
+                            <td><span style="color: var(--secondary-accent); font-weight: bold;">ACTIVE_VERIFIED</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>mcp_route_anaconda_psm</code></td>
+                            <td>PSM On-Prem CVE Gatekeeper</td>
+                            <td><strong>8092</strong></td>
+                            <td>PACKAGE_SECURITY_MANAGER</td>
+                            <td><span style="color: var(--secondary-accent); font-weight: bold;">ACTIVE_VERIFIED</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>mcp_route_anaconda_vector_db</code></td>
+                            <td>RAG Vector DB (1,679 Embeddings)</td>
+                            <td><strong>8093</strong></td>
+                            <td>RAG_VECTOR_DB</td>
+                            <td><span style="color: var(--secondary-accent); font-weight: bold;">ACTIVE_VERIFIED</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Tab 3: AVX2 SIMD Engine -->
+        <section id="avx2-tab" class="tab-content">
+            <div class="card">
+                <h2 style="font-family: 'Outfit'; font-size: 18px; margin-bottom: 14px;"><i class="fa-solid fa-microchip"></i> AVX2 SIMD INT4 Hardware Accelerator Engine (CYLINDER_18)</h2>
+                <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px;">
+                    Compiled natively via AlmaLinux-10 GCC 14.3.1 for Intel Core i9-14900K. 10/10 Correctness tests passed.
+                </p>
+                <div class="controls-grid" style="margin-bottom: 20px;">
+                    <button class="btn-action" onclick="runCommand('run-avx2-bench')">
+                        <i class="fa-solid fa-bolt"></i> Run Live AVX2 Benchmark
+                    </button>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Kernel Benchmark</th>
+                            <th>Layer Size</th>
+                            <th>Latency</th>
+                            <th>Bandwidth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>INT4 GEMV</strong></td>
+                            <td>4096 → 4096 (7B Model)</td>
+                            <td><strong>0.956 ms</strong></td>
+                            <td>8.55 GB/s</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MHA Attention Forward</strong></td>
+                            <td>seq=2048, 32 heads, dim=128</td>
+                            <td><strong>4.668 ms</strong></td>
+                            <td>12.74 GB/s</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Softmax Vectorized</strong></td>
+                            <td>n = 4096</td>
+                            <td><strong>0.001 ms</strong></td>
+                            <td>23.12 GB/s</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AoS → SoA Transpose</strong></td>
+                            <td>1024 × 256 floats</td>
+                            <td><strong>0.064 ms</strong></td>
+                            <td>32.50 GB/s</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Tab 4: Locutus Neural Gateway -->
+        <section id="locutus-tab" class="tab-content">
+            <div class="card">
+                <h2 style="font-family: 'Outfit'; font-size: 18px; margin-bottom: 14px;"><i class="fa-solid fa-brain"></i> Locutus Agentic Backend & Neural Gateway</h2>
+                <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px;">
+                    12-Agent structural cluster backed by neural weights matrix at <code>C:\Locutus_UAO_Master_Environment\locutus_neural_weights.sqlite</code>.
+                </p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Agent ID</th>
+                            <th>Role & Specialization</th>
+                            <th>Port Binding</th>
+                            <th>Neural Weight Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>locutus_prime_director</code></td>
+                            <td>Master Cluster Orchestrator</td>
+                            <td>Port 8081</td>
+                            <td><span style="color: var(--secondary-accent);">ARMED_WEIGHTS_LOADED</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>locutus_code_specialist</code></td>
+                            <td>Qwen-2.5-Coder-32B Synthesizer</td>
+                            <td>Port 8091</td>
+                            <td><span style="color: var(--secondary-accent);">ARMED_WEIGHTS_LOADED</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>locutus_cyber_governor</code></td>
+                            <td>DeepSeek-R1-70B Security Guard</td>
+                            <td>Port 8092</td>
+                            <td><span style="color: var(--secondary-accent);">ARMED_WEIGHTS_LOADED</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>locutus_voice_agent</code></td>
+                            <td>Whisper STT + Piper TTS Gateway</td>
+                            <td>Port 8094/8095</td>
+                            <td><span style="color: var(--secondary-accent);">ARMED_WEIGHTS_LOADED</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Tab 5: Database Explorer -->
+        <section id="database-tab" class="tab-content">
+            <div class="card">
+                <h2 style="font-family: 'Outfit'; font-size: 18px; margin-bottom: 14px;"><i class="fa-solid fa-magnifying-glass"></i> SQLite Matrix & Vector Database Explorer</h2>
+                <input type="text" id="db-search-input" placeholder="Search across 43 tables, 1,742 chat items, and 1,679 RAG vectors..." style="width: 100%; padding: 12px 16px; background: #06090e; border: 1px solid var(--border-color); border-radius: var(--radius-md); color: var(--text-main); font-family: 'Inter', sans-serif; font-size: 14px; margin-bottom: 16px;" onkeyup="filterDatabaseTable()">
+                
+                <table class="data-table" id="matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Table Name</th>
+                            <th>Category</th>
+                            <th>Record Count</th>
+                            <th>Primary Storage Path</th>
+                            <th>Mirror Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>google_spark_chats_matrix</code></td>
+                            <td>Spark Chat Vault</td>
+                            <td><strong>1,742</strong> Records</td>
+                            <td><code>living_repository/synaptic_matrix/</code></td>
+                            <td><span style="color: var(--secondary-accent);">Google Drive Synced</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>anaconda_vector_db</code></td>
+                            <td>RAG Embeddings</td>
+                            <td><strong>1,679</strong> Embeddings</td>
+                            <td><code>C:\AI_Dedicated_Storage_1TB\</code></td>
+                            <td><span style="color: var(--secondary-accent);">Google Drive Synced</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>mcp_synaptic_routes</code></td>
+                            <td>MCP Gateway</td>
+                            <td><strong>112</strong> Routes</td>
+                            <td><code>mcp_servers/</code></td>
+                            <td><span style="color: var(--secondary-accent);">Google Drive Synced</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>locutus_agent_cluster</code></td>
+                            <td>Agent Structural Matrix</td>
+                            <td><strong>12</strong> Agents</td>
+                            <td><code>locutus_neural_weights.sqlite</code></td>
+                            <td><span style="color: var(--secondary-accent);">Google Drive Synced</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>universal_vm_sandbox_registry</code></td>
+                            <td>VM Templates</td>
+                            <td><strong>3</strong> VM Golden Templates</td>
+                            <td><code>C:\AI_Dedicated_Storage_1TB\Golden_VM_Templates\</code></td>
+                            <td><span style="color: var(--secondary-accent);">Google Drive Synced</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        QENTA-PRIME & UAO Master Web App — Anaconda AI Platform • AVX2 CYLINDER_18 • Locutus Neural Gateway | $0.00 Financial Cost
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
