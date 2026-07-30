@@ -1,0 +1,20 @@
+{
+  "drive_letter": "H:",
+  "bus_type": "High-Speed NVMe / External Target Storage Bus",
+  "mount_status": "ONLINE",
+  "allocated_subdirectories": [
+    "H:\\AI_Dedicated_Storage_Vault",
+    "H:\\AI_Dedicated_Storage_MultiModal",
+    "H:\\Golden_VM_Templates",
+    "H:\\QENTA_PRIME_BACKUP",
+    "H:\\models_gguf_mirror"
+  ],
+  "supported_models": [
+    "Llama-3.3-70B-Instruct-Q4_K_M.gguf",
+    "Qwen-2.5-Coder-32B-Instruct-Q5_K_M.gguf",
+    "DeepSeek-R1-Distill-Llama-70B-Q4_K_M.gguf",
+    "Codestral-22B-v0.1-Q5_K_M.gguf"
+  ],
+  "financial_cost": "$0.00 FREE",
+  "timestamp_utc": "2026-07-30 20:33:37"
+}
