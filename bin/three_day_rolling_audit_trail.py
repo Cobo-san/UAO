@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 3-Day Rolling Audit Trail & Master Snapshot Preservation Engine
-Enforces permanent retention of all build snapshots in golden_snapshots/ and maintains a rolling 72-hour
+Enforces permanent retention of all build snapshots in golden_snapshots/ and maintains a rolling 96-hour
 audit trail log matrix for UAO system operations, model queries, and zero-cost policy enforcement.
 """
 
@@ -47,11 +47,11 @@ def list_build_snapshots(snapshots_dir):
     return snapshots
 
 def maintain_three_day_audit_trail(paths):
-    print("\n[*] Maintaining 3-Day Rolling Audit Trail Log Matrix (72-Hour Retention Window)...")
+    print("\n[*] Maintaining 4-Day Rolling Audit Trail Log Matrix (96-Hour Retention Window)...")
     os.makedirs(os.path.dirname(paths["audit_log"]), exist_ok=True)
 
     now_utc = datetime.utcnow()
-    three_days_ago = now_utc - timedelta(days=3)
+    three_days_ago = now_utc - timedelta(days=4)
 
     log_entries = []
     if os.path.exists(paths["audit_log"]):
@@ -61,7 +61,7 @@ def maintain_three_day_audit_trail(paths):
         except Exception:
             log_entries = []
 
-    # Filter out entries older than 3 days (72 hours)
+    # Filter out entries older than 4 days (96 hours)
     filtered_entries = []
     for entry in log_entries:
         entry_time_str = entry.get("timestamp_utc", "")
@@ -76,7 +76,7 @@ def maintain_three_day_audit_trail(paths):
     new_event = {
         "timestamp_utc": now_utc.strftime("%Y-%m-%d %H:%M:%S"),
         "event_type": "MASTER_BUILD_SNAPSHOT_VERIFICATION",
-        "retention_policy": "3-Day Rolling Audit Trail Always Active",
+        "retention_policy": "4-Day Rolling Audit Trail Always Active",
         "zero_cost_policy": "EXACT $0.00 / Month Enforced",
         "storage_policy": "All NVMe Models Read-Only (:ro) & KVM Dedicated to DDR5 RAM"
     }
@@ -85,15 +85,15 @@ def maintain_three_day_audit_trail(paths):
     with open(paths["audit_log"], "w", encoding="utf-8") as f:
         json.dump(filtered_entries, f, indent=2)
 
-    print(f"  [+] Audit Trail Updated: {len(filtered_entries)} active events in 3-day window.")
+    print(f"  [+] Audit Trail Updated: {len(filtered_entries)} active events in 4-day window.")
     print(f"  [+] Saved to: {paths['audit_log']}")
 
 def main():
-    print("=== 3-DAY ROLLING AUDIT TRAIL & MASTER SNAPSHOT PRESERVATION ENGINE ===")
+    print("=== 4-DAY ROLLING AUDIT TRAIL & MASTER SNAPSHOT PRESERVATION ENGINE ===")
     paths = get_paths()
     list_build_snapshots(paths["snapshots_dir"])
     maintain_three_day_audit_trail(paths)
-    print("\n[OK] 3-DAY ROLLING AUDIT TRAIL & SNAPSHOT PRESERVATION ENFORCED ALWAYS!")
+    print("\n[OK] 4-DAY ROLLING AUDIT TRAIL & SNAPSHOT PRESERVATION ENFORCED ALWAYS!")
 
 if __name__ == "__main__":
     main()
